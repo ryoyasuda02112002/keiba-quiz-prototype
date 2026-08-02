@@ -1,0 +1,93 @@
+[
+  {
+    "id": "sample_2026_001",
+    "horseId": "sample_horse_001",
+    "answer": { "nameJa": "サンプルホースアルファ", "nameKana": "サンプルホースアルファ", "aliases": ["さんぷるほーすあるふぁ"] },
+    "initial": {
+      "overallRecord": "6-1-1-1",
+      "g1Record": "1-0-1-0",
+      "jockeys": ["サンプル騎手A"],
+      "asOfDate": "2026-07-31",
+      "eligibility": "サンプル: 2026年のJRA G1で3着以内"
+    },
+    "hints": { "H1": "牡4", "H2": "芝・中距離", "H3": "2-1-1-1", "H4": ["サンプルG1春 1着", "サンプルG1秋 3着"], "H5": "2026-07-12 / 芝 / 2000m" },
+    "firstCharacter": "サ",
+    "explanation": "サンプルデータです。実在馬データへ差し替える前に全項目を確認してください。",
+    "sourceNote": "UI確認用fixture",
+    "verifiedAt": "2026-08-01",
+    "enabled": true
+  },
+  {
+    "id": "sample_2026_002",
+    "horseId": "sample_horse_002",
+    "answer": { "nameJa": "ブルーサンプル", "nameKana": "ブルーサンプル", "aliases": ["ぶるーさんぷる"] },
+    "initial": {
+      "overallRecord": "4-3-0-2",
+      "g1Record": "0-1-0-1",
+      "jockeys": ["サンプル騎手B", "サンプル騎手C"],
+      "asOfDate": "2026-07-31",
+      "eligibility": "サンプル: 2026年のJRA G1で3着以内"
+    },
+    "hints": { "H1": "牝5", "H2": "芝・マイル", "H3": "1-2-0-3", "H4": ["サンプルG1夏 2着"], "H5": "2026-06-21 / 芝 / 1600m" },
+    "firstCharacter": "ブ",
+    "explanation": "サンプルデータです。回答正規化・誤答・ヒント利用の確認に使います。",
+    "sourceNote": "UI確認用fixture",
+    "verifiedAt": "2026-08-01",
+    "enabled": true
+  },
+  {
+    "id": "sample_2026_003",
+    "horseId": "sample_horse_003",
+    "answer": { "nameJa": "グリーンテスト", "nameKana": "グリーンテスト", "aliases": ["ぐりーんてすと"] },
+    "initial": {
+      "overallRecord": "5-0-2-2",
+      "g1Record": "0-0-1-1",
+      "jockeys": ["サンプル騎手D"],
+      "asOfDate": "2026-07-31",
+      "eligibility": "サンプル: 2026年のJRA G1で3着以内"
+    },
+    "hints": { "H1": "牡3", "H2": "芝・長距離", "H3": "1-0-2-1", "H4": ["サンプルG1長距離 3着"], "H5": "2026-05-31 / 芝 / 2400m" },
+    "firstCharacter": "グ",
+    "explanation": "サンプルデータです。",
+    "sourceNote": "UI確認用fixture",
+    "verifiedAt": "2026-08-01",
+    "enabled": true
+  },
+  {
+    "id": "sample_2026_004",
+    "horseId": "sample_horse_004",
+    "answer": { "nameJa": "レッドフィクスチャ", "nameKana": "レッドフィクスチャ", "aliases": ["れっどふぃくすちゃ"] },
+    "initial": {
+      "overallRecord": "7-2-0-1",
+      "g1Record": "1-0-0-0",
+      "jockeys": ["サンプル騎手E"],
+      "asOfDate": "2026-07-31",
+      "eligibility": "サンプル: 2026年のJRA G1で3着以内"
+    },
+    "hints": { "H1": "牡4", "H2": "ダート・中距離", "H3": "3-0-0-1", "H4": ["サンプルG1ダート 1着"], "H5": "2026-07-05 / ダート / 1800m" },
+    "firstCharacter": "レ",
+    "explanation": "サンプルデータです。",
+    "sourceNote": "UI確認用fixture",
+    "verifiedAt": "2026-08-01",
+    "enabled": true
+  },
+  {
+    "id": "sample_2026_005",
+    "horseId": "sample_horse_005",
+    "answer": { "nameJa": "ホワイトモック", "nameKana": "ホワイトモック", "aliases": ["ほわいともっく"] },
+    "initial": {
+      "overallRecord": "3-4-1-0",
+      "g1Record": "0-1-0-0",
+      "jockeys": ["サンプル騎手F", "サンプル騎手G"],
+      "asOfDate": "2026-07-31",
+      "eligibility": "サンプル: 2026年のJRA G1で3着以内"
+    },
+    "hints": { "H1": "牝4", "H2": "芝・短距離", "H3": "1-3-0-0", "H4": ["サンプルG1短距離 2着"], "H5": "2026-06-14 / 芝 / 1200m" },
+    "firstCharacter": "ホ",
+    "explanation": "サンプルデータです。",
+    "sourceNote": "UI確認用fixture",
+    "verifiedAt": "2026-08-01",
+    "enabled": true
+  }
+]
+
