@@ -20,7 +20,8 @@ const winnerIds2026 = questions2026.filter((question) => / 1着[、。]/.test(qu
 const winnerIds2025 = questions2025.filter((question) => / 1着[、。]/.test(question.explanation)).map((question) => question.id);
 const podiumIds2025 = questions2025.map((question) => question.id);
 const rotate = (ids, offset) => ids.map((_, index) => ids[(index + offset) % ids.length]);
-const dateOffset = [...dateKey].reduce((sum, character) => sum + character.charCodeAt(0), 0);
+// YYYY-MM-DD をそのまま数値化して、日付が変わるたびに確実に出題順を変える。
+const dateOffset = Number(dateKey.replaceAll('-', ''));
 let attempt = null;
 let attemptKey = null;
 let selectedMode = null;
@@ -137,34 +138,20 @@ function home() {
 function quiz() {
   const { question: rawQuestion, answer } = getCurrent();
   const question = quizQuestion(rawQuestion);
-  const isYearArchive = selectedYear === 2025;
-  const recordLabel = isYearArchive ? '2025年G1馬券内実績' : '通算成績';
-  const g1RecordLabel = isYearArchive ? '内訳（1着-2着-3着）' : 'G1通算成績';
-  const jockeyLabel = isYearArchive ? '馬券内時の騎乗騎手' : '騎乗騎手';
   const currentScore = scoreQuestion({ correct: true, ...answer });
-  const archiveHints = isYearArchive ? {
-    H2: { label: '2025年G1での最多騎乗騎手', description: '2025年の馬券内時に最も多く騎乗した騎手' },
-    H3: { label: '2025年G1馬券内の内訳', description: '2025年の1着・2着・3着回数' },
-    H5: { label: '最後の2025年G1馬券内条件', description: '最後に馬券内となった2025年G1の芝・ダートと距離' },
-  } : {};
   const hintValue = (id) => {
-    if (id === 'H2') return `${isYearArchive ? '2025年G1での最多騎乗騎手' : '最多騎乗騎手'}：${displayJockeyName(question.initial.jockeys[0])}`;
-    if (id === 'H5') return `${isYearArchive ? '最後の2025年G1馬券内条件' : '直近出走の条件'}：${latestCondition(question.hints.H2)}`;
+    if (id === 'H2') return `最多騎乗騎手：${question.initial.mostRiddenJockey ?? displayJockeyName(question.initial.jockeys[0])}`;
+    if (id === 'H5') return `直近出走の条件：${latestCondition(question.hints.H2)}`;
     return question.hints[id];
   };
-  const hints = HINTS.map(({ id, label, description, cost }) => {
-    const archiveHint = archiveHints[id];
-    const hintLabel = archiveHint?.label ?? label;
-    const hintDescription = archiveHint?.description ?? description;
-    return answer.revealedHints.includes(id)
-      ? `<article class="hint open"><h3>${hintLabel}<span>−${cost}点</span></h3><p>${Array.isArray(hintValue(id)) ? hintValue(id).map(esc).join('<br>') : esc(hintValue(id))}</p></article>`
-      : `<button class="hint" data-hint="${id}"><span class="hint-copy"><b>${hintLabel}</b><small>${hintDescription}</small></span><strong>−${cost}点</strong></button>`;
-  }).join('');
+  const hints = HINTS.map(({ id, label, description, cost }) => answer.revealedHints.includes(id)
+    ? `<article class="hint open"><h3>${label}<span>−${cost}点</span></h3><p>${Array.isArray(hintValue(id)) ? hintValue(id).map(esc).join('<br>') : esc(hintValue(id))}</p></article>`
+    : `<button class="hint" data-hint="${id}"><span class="hint-copy"><b>${label}</b><small>${description}</small></span><strong>−${cost}点</strong></button>`).join('');
   const firstReady = canRevealFirstCharacter(answer.revealedHints);
   const uniqueJockeys = [...new Set(question.initial.jockeys.map(displayJockeyName))];
   if (!answer.jockeyDisplayOrder) answer.jockeyDisplayOrder = shuffled(uniqueJockeys);
   const jockeys = answer.jockeyDisplayOrder;
-  shell(`<section class="quiz-head"><span>第${attempt.currentPosition + 1}問 / 5問</span><strong>現在の得点 ${currentScore}点</strong><button class="text-button back-home" id="back-home">← ホームへ戻る</button></section><section class="card"><p class="caption">この馬は誰？</p>${isYearArchive ? '<p class="small">2025年版は、2025年JRA平地G1での馬券内実績を表示しています。</p>' : ''}<dl class="facts"><div><dt>${recordLabel}</dt><dd>${esc(question.initial.overallRecord)}</dd></div><div><dt>${g1RecordLabel}</dt><dd>${esc(question.initial.g1Record)}</dd></div><div><dt>${jockeyLabel}<br><small>表示順はランダムです</small></dt><dd>${jockeys.map(esc).join('、')}</dd></div><div><dt>集計基準日</dt><dd>${esc(question.initial.asOfDate)}</dd></div><div><dt>対象条件</dt><dd>${esc(question.initial.eligibility)}</dd></div></dl></section><section class="hint-section"><div class="hint-section__head"><p class="caption">HINTS</p><p>ヒントを開くほど、獲得できる点数は下がります。</p></div><div class="hint-grid">${hints}</div></section><section class="card rescue"><button class="secondary" id="first" ${firstReady && !answer.usedFirstCharacter ? '' : 'disabled'}>${answer.usedFirstCharacter ? `頭文字：${esc(question.firstCharacter)}` : '頭文字を表示（−150点）'}</button><p>${firstReady ? '最後の救済ヒントです。' : '通常ヒントをすべて開くと使えます。'}</p></section><section class="card"><label for="answer">馬名を入力</label><input id="answer" autocomplete="off" placeholder="例：サンプルホース" /><p class="error" id="message" role="alert"></p><div class="button-row"><button id="submit" class="primary">回答する</button><button id="giveup" class="text-button">ギブアップ（0点）</button></div><p class="small">誤答: ${answer.wrongAnswerCount}回（1回につき−50点）</p></section>`);
+  shell(`<section class="quiz-head"><span>第${attempt.currentPosition + 1}問 / 5問</span><strong>現在の得点 ${currentScore}点</strong><button class="text-button back-home" id="back-home">← ホームへ戻る</button></section><section class="card"><p class="caption">この馬は誰？</p><dl class="facts"><div><dt>通算成績</dt><dd>${esc(question.initial.overallRecord)}</dd></div><div><dt>G1通算成績</dt><dd>${esc(question.initial.g1Record)}</dd></div><div><dt>騎乗騎手<br><small>表示順はランダムです</small></dt><dd>${jockeys.map(esc).join('、')}</dd></div><div><dt>集計基準日</dt><dd>${esc(question.initial.asOfDate)}</dd></div><div><dt>対象条件</dt><dd>${esc(question.initial.eligibility)}</dd></div></dl></section><section class="hint-section"><div class="hint-section__head"><p class="caption">HINTS</p><p>ヒントを開くほど、獲得できる点数は下がります。</p></div><div class="hint-grid">${hints}</div></section><section class="card rescue"><button class="secondary" id="first" ${firstReady && !answer.usedFirstCharacter ? '' : 'disabled'}>${answer.usedFirstCharacter ? `頭文字：${esc(question.firstCharacter)}` : '頭文字を表示（−150点）'}</button><p>${firstReady ? '最後の救済ヒントです。' : '通常ヒントをすべて開くと使えます。'}</p></section><section class="card"><label for="answer">馬名を入力</label><input id="answer" autocomplete="off" placeholder="例：サンプルホース" /><p class="error" id="message" role="alert"></p><div class="button-row"><button id="submit" class="primary">回答する</button><button id="giveup" class="text-button">ギブアップ（0点）</button></div><p class="small">誤答: ${answer.wrongAnswerCount}回（1回につき−50点）</p></section>`);
   document.querySelector('#back-home').onclick = () => {
     if (!window.confirm('クイズを中断してホームへ戻りますか？\n進行状況は保存され、ホームから再開できます。')) return;
     homeStep = 'modes';
