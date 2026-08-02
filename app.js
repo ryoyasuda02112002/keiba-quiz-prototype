@@ -3,8 +3,8 @@ import { clearAttempt, loadAttempt, saveAttempt } from './storage.js';
 
 const app = document.querySelector('#app');
 const [questions, dailySets] = await Promise.all([
-  fetch('./questions.2026.json').then((r) => r.json()),
-  fetch('./daily-sets.2026.json').then((r) => r.json()),
+  fetch('./data/questions.2026.json').then((r) => r.json()),
+  fetch('./data/daily-sets.2026.json').then((r) => r.json()),
 ]);
 const questionById = new Map(questions.filter((q) => q.enabled).map((q) => [q.id, q]));
 const dateKey = japanDateKey();
@@ -14,7 +14,7 @@ let route = attempt?.completedAt ? 'summary' : attempt ? 'quiz' : 'home';
 
 const esc = (v) => String(v).replace(/[&<>'"]/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;' })[c]);
 const save = () => saveAttempt(attempt);
-const shell = (body) => { app.innerHTML = `<header class="site-header"><p>KEIBA QUIZ / PROTOTYPE</p><h1>競馬クイズ</h1></header>${body}<footer>プロトタイプ版・正式ランキングなし・JRA公式サービスではありません。<br>現在はUI確認用のサンプル問題を表示しています。</footer>`; };
+const shell = (body) => { app.innerHTML = `<header class="site-header"><p>KEIBA QUIZ / PROTOTYPE</p><h1>競馬クイズ</h1></header>${body}<footer>プロトタイプ版・正式ランキングなし・JRA公式サービスではありません。<br>2026年JRA平地G1の馬券圏内馬を対象にした身内検証用です。</footer>`; };
 const getCurrent = () => { const answer = attempt.answers[attempt.currentPosition]; return { answer, question: questionById.get(answer.questionId) }; };
 
 function home() {
@@ -55,7 +55,7 @@ function result() {
 function summary() {
   const elapsed = Math.max(0, new Date(attempt.completedAt).getTime() - new Date(attempt.startedAt).getTime());
   const items = attempt.answers.map((a, i) => `<li><span>第${i + 1}問</span><strong>${a.result === 'correct' ? '正解' : 'ギブアップ'}</strong><b>${a.score ?? 0}点</b></li>`).join('');
-  shell(`<section class="card summary"><span class="badge">今日の結果</span><h2>${correctCount(attempt)} / 5問 正解</h2><p class="final-score">${totalScore(attempt).toLocaleString()}<small> / 5,000点</small></p><ul class="score-list">${items}</ul><dl class="meta"><div><dt>通常ヒント</dt><dd>${attempt.answers.reduce((n,a) => n + a.revealedHints.length, 0)}件</dd></div><div><dt>頭文字</dt><dd>${attempt.answers.filter((a) => a.usedFirstCharacter).length}件</dd></div><div><dt>所要時間</dt><dd>${Math.floor(elapsed / 60000)}分${Math.floor(elapsed / 1000) % 60}秒</dd></div></dl><div class="button-row"><button id="share" class="primary">結果を共有</button><button id="reset" class="secondary">最初から確認する</button></div><p class="notice">この版はサンプル問題による身内テスト用です。結果は正式ランキングには使われません。</p></section>`);
+  shell(`<section class="card summary"><span class="badge">今日の結果</span><h2>${correctCount(attempt)} / 5問 正解</h2><p class="final-score">${totalScore(attempt).toLocaleString()}<small> / 5,000点</small></p><ul class="score-list">${items}</ul><dl class="meta"><div><dt>通常ヒント</dt><dd>${attempt.answers.reduce((n,a) => n + a.revealedHints.length, 0)}件</dd></div><div><dt>頭文字</dt><dd>${attempt.answers.filter((a) => a.usedFirstCharacter).length}件</dd></div><div><dt>所要時間</dt><dd>${Math.floor(elapsed / 60000)}分${Math.floor(elapsed / 1000) % 60}秒</dd></div></dl><div class="button-row"><button id="share" class="primary">結果を共有</button><button id="reset" class="secondary">最初から確認する</button></div><p class="notice">この版は実在馬データによる身内検証用です。結果は正式ランキングには使われません。</p></section>`);
   document.querySelector('#share').onclick = async () => { const text = `競馬クイズ ${dateKey}\n2026年 JRA G1馬券圏内馬\n\n正解 ${correctCount(attempt)}/5\nスコア ${totalScore(attempt).toLocaleString()} / 5,000\n${attempt.answers.map((a) => a.result === 'correct' ? '🟩' : '🟥').join(' ')}\n\nプロトタイプ版`; try { if (navigator.share) await navigator.share({ title: '競馬クイズ', text }); else { await navigator.clipboard.writeText(text); alert('結果をコピーしました。'); } } catch (e) { if (e.name !== 'AbortError') alert('共有できませんでした。'); } };
   document.querySelector('#reset').onclick = () => { clearAttempt(dateKey); attempt = null; route = 'home'; render(); };
 }
