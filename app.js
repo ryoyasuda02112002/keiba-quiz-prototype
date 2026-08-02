@@ -182,9 +182,28 @@ function result() {
 function summary() {
   const elapsed = Math.max(0, new Date(attempt.completedAt).getTime() - new Date(attempt.startedAt).getTime());
   const items = attempt.answers.map((a, i) => `<li><span>第${i + 1}問</span><strong>${a.result === 'correct' ? '正解' : 'ギブアップ'}</strong><b>${a.score ?? 0}点</b></li>`).join('');
-  shell(`<section class="card summary"><span class="badge">今日の結果</span><h2>${correctCount(attempt)} / 5問 正解</h2><p class="final-score">${totalScore(attempt).toLocaleString()}<small> / 5,000点</small></p><ul class="score-list">${items}</ul><dl class="meta"><div><dt>通常ヒント</dt><dd>${attempt.answers.reduce((n,a) => n + a.revealedHints.length, 0)}件</dd></div><div><dt>頭文字</dt><dd>${attempt.answers.filter((a) => a.usedFirstCharacter).length}件</dd></div><div><dt>所要時間</dt><dd>${Math.floor(elapsed / 60000)}分${Math.floor(elapsed / 1000) % 60}秒</dd></div></dl><div class="button-row"><button id="share" class="primary">結果を共有</button><button id="reset" class="secondary">最初から確認する</button></div><p class="notice">この版は実在馬データによる身内検証用です。結果は正式ランキングには使われません。</p></section>`);
-  document.querySelector('#share').onclick = async () => { const text = `KEIBA GUESS ${dateKey}\n${selectedYear}年 ${MODE_DEFINITIONS[selectedMode].title}\n\n正解 ${correctCount(attempt)}/5\nスコア ${totalScore(attempt).toLocaleString()} / 5,000\n${attempt.answers.map((a) => a.result === 'correct' ? '🟩' : '🟥').join(' ')}\n\nプロトタイプ版`; try { if (navigator.share) await navigator.share({ title: 'KEIBA GUESS', text }); else { await navigator.clipboard.writeText(text); alert('結果をコピーしました。'); } } catch (e) { if (e.name !== 'AbortError') alert('共有できませんでした。'); } };
-  document.querySelector('#reset').onclick = () => { clearAttempt(attemptKey); attempt = null; selectedMode = null; selectedYear = null; navigate('home'); };
+  shell(`<section class="card summary"><span class="badge">今日の結果</span><h2>${correctCount(attempt)} / 5問 正解</h2><p class="final-score">${totalScore(attempt).toLocaleString()}<small> / 5,000点</small></p><ul class="score-list">${items}</ul><dl class="meta"><div><dt>通常ヒント</dt><dd>${attempt.answers.reduce((n,a) => n + a.revealedHints.length, 0)}件</dd></div><div><dt>頭文字</dt><dd>${attempt.answers.filter((a) => a.usedFirstCharacter).length}件</dd></div><div><dt>所要時間</dt><dd>${Math.floor(elapsed / 60000)}分${Math.floor(elapsed / 1000) % 60}秒</dd></div></dl><div class="button-row"><button id="share" class="primary">結果を共有</button><button id="reset" class="secondary">最初から確認する</button></div><p class="notice" id="share-status" role="status"></p><p class="notice">この版は実在馬データによる身内検証用です。結果は正式ランキングには使われません。</p></section>`);
+  document.querySelector('#share').onclick = async () => {
+    const text = `KEIBA GUESS ${dateKey}\n${selectedYear}年 ${MODE_DEFINITIONS[selectedMode].title}\n\n正解 ${correctCount(attempt)}/5\nスコア ${totalScore(attempt).toLocaleString()} / 5,000\n${attempt.answers.map((a) => a.result === 'correct' ? '🟩' : '🟥').join(' ')}\n\nプロトタイプ版`;
+    const status = document.querySelector('#share-status');
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: 'KEIBA GUESS', text });
+        status.textContent = '共有画面を開きました。';
+      } else {
+        await navigator.clipboard.writeText(text);
+        status.textContent = '共有用テキストをコピーしました。';
+      }
+    } catch (error) {
+      try {
+        await navigator.clipboard.writeText(text);
+        status.textContent = '共有画面を開けなかったため、共有用テキストをコピーしました。';
+      } catch {
+        status.textContent = '共有用テキストをコピーできませんでした。';
+      }
+    }
+  };
+  document.querySelector('#reset').onclick = () => { clearAttempt(attemptKey); attempt = null; selectedMode = null; selectedYear = null; homeStep = 'modes'; navigate('home'); };
 }
 
 function render() { ({ home, quiz, result, summary })[route](); }
