@@ -13,8 +13,8 @@ const questionById = new Map(questions.filter((q) => q.enabled).map((q) => [q.id
 const dateKey = japanDateKey();
 const setIds = dailySets2026[dateKey] ?? dailySets2026.default;
 const MODE_DEFINITIONS = Object.freeze({
-  winners: { title: '単年・G1勝利馬', difficulty: '初級', target: 'G1勝利馬' },
-  podium: { title: '単年・G1馬券圏内馬', difficulty: '中級', target: 'G1で3着内の馬' },
+  winners: { title: '単年・G1勝利馬', difficulty: '初級', target: '勝った馬' },
+  podium: { title: '単年・G1馬券圏内馬', difficulty: '中級', target: '3着以内に入った馬' },
 });
 const winnerIds2026 = questions2026.filter((question) => / 1着[、。]/.test(question.explanation)).map((question) => question.id);
 const winnerIds2025 = questions2025.filter((question) => / 1着[、。]/.test(question.explanation)).map((question) => question.id);
