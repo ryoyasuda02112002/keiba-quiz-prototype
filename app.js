@@ -10,6 +10,10 @@ const questionById = new Map(questions.filter((q) => q.enabled).map((q) => [q.id
 const dateKey = japanDateKey();
 const setIds = dailySets[dateKey] ?? dailySets.default;
 let attempt = loadAttempt(dateKey);
+if (attempt && attempt.answers.some((answer) => !questionById.has(answer.questionId))) {
+  clearAttempt(dateKey);
+  attempt = null;
+}
 let route = attempt?.completedAt ? 'summary' : attempt ? 'quiz' : 'home';
 
 // 画面遷移はブラウザ履歴にも記録し、戻る操作で開始画面へ安全に復帰できるようにする。
