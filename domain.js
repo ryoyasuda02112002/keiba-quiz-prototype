@@ -1,9 +1,8 @@
 export const HINTS = [
-  { id: 'H1', label: '性別・馬齢', cost: 100 },
-  { id: 'H2', label: '主な適性', cost: 150 },
-  { id: 'H3', label: '重賞通算成績', cost: 150 },
-  { id: 'H4', label: 'G1での主な実績', cost: 150 },
-  { id: 'H5', label: '直近出走', cost: 150 },
+  { id: 'H1', label: '性別・馬齢', description: '性別と現在の馬齢', cost: 100 },
+  { id: 'H2', label: '最多騎乗騎手', description: '最も多く騎乗した騎手', cost: 150 },
+  { id: 'H3', label: '重賞通算成績', description: '重賞での通算成績', cost: 150 },
+  { id: 'H5', label: '直近出走の条件', description: '最後に走った芝・ダートと距離', cost: 150 },
 ];
 
 // 長音符「ー」は馬名の一部なので除去しない。
