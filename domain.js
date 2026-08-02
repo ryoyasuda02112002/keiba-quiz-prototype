@@ -19,6 +19,14 @@ export function isCorrectAnswer(input, answer) {
   return [answer.nameJa, answer.nameKana, ...(answer.aliases ?? [])].map(normalizeAnswer).includes(normalized);
 }
 
+export function formatSurfaceDistance(value = '') {
+  const normalized = String(value).normalize('NFKC');
+  const match = normalized.match(/(芝|ダート|ダ)\s*(?:[\/／・]\s*)?(\d{3,4})\s*m?/i);
+  if (!match) return null;
+  const surface = match[1].startsWith('ダ') ? 'ダート' : '芝';
+  return `${surface}/${match[2]}m`;
+}
+
 export function canRevealFirstCharacter(revealedHints) {
   return HINTS.every(({ id }) => revealedHints.includes(id));
 }

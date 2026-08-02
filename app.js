@@ -1,4 +1,4 @@
-import { HINTS, canRevealFirstCharacter, correctCount, createAttempt, isCorrectAnswer, japanDateKey, scoreQuestion, totalScore } from './domain.js';
+import { HINTS, canRevealFirstCharacter, correctCount, createAttempt, formatSurfaceDistance, isCorrectAnswer, japanDateKey, scoreQuestion, totalScore } from './domain.js';
 import { clearAttempt, loadAttempt, saveAttempt } from './storage.js';
 
 const app = document.querySelector('#app');
@@ -62,8 +62,7 @@ const shuffled = (items) => {
   return result;
 };
 const latestCondition = (value) => {
-  const match = String(value).match(/(?:^|\/\s*)(芝|ダ)(\d{3,4})(?:\s*\/|\s*$)/);
-  return match ? `${match[1]}/${match[2]}m` : '芝・ダート／距離の情報なし';
+  return formatSurfaceDistance(value) ?? '芝・ダート／距離の情報なし';
 };
 const modeTarget = () => `${selectedYear}年のJRA平地G1${selectedMode === 'winners' ? '勝利馬' : 'で3着内'}`;
 const questionIdsFor = (mode, year) => {

@@ -20,6 +20,14 @@ function isCorrectAnswer(input, answer) {
   return [answer.nameJa, answer.nameKana, ...(answer.aliases ?? [])].map(normalizeAnswer).includes(normalized);
 }
 
+function formatSurfaceDistance(value = '') {
+  const normalized = String(value).normalize('NFKC');
+  const match = normalized.match(/(芝|ダート|ダ)\s*(?:[\/／・]\s*)?(\d{3,4})\s*m?/i);
+  if (!match) return null;
+  const surface = match[1].startsWith('ダ') ? 'ダート' : '芝';
+  return `${surface}/${match[2]}m`;
+}
+
 function canRevealFirstCharacter(revealedHints) {
   return HINTS.every(({ id }) => revealedHints.includes(id));
 }
@@ -110,8 +118,7 @@ const shuffled = (items) => {
   return result;
 };
 const latestCondition = (value) => {
-  const match = String(value).match(/(?:^|\/\s*)(芝|ダ)(\d{3,4})(?:\s*\/|\s*$)/);
-  return match ? `${match[1]}/${match[2]}m` : '芝・ダート／距離の情報なし';
+  return formatSurfaceDistance(value) ?? '芝・ダート／距離の情報なし';
 };
 const modeTarget = () => `${selectedYear}年のJRA平地G1${selectedMode === 'winners' ? '勝利馬' : 'で3着内'}`;
 const questionIdsFor = (mode, year) => {
