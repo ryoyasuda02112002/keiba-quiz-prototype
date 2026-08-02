@@ -51,10 +51,10 @@ function clearAttempt(date) { localStorage.removeItem(key(date)); }
 
 const app = document.querySelector('#app');
 const [questions2026, dailySets2026, questions2025, dailySets2025] = await Promise.all([
-  fetch('./questions.2026.json').then((r) => r.json()),
-  fetch('./daily-sets.2026.json').then((r) => r.json()),
-  fetch('./questions.2025.json').then((r) => r.json()),
-  fetch('./daily-sets.2025.json').then((r) => r.json()),
+  fetch('./questions.2026.json?v=verified-2025-final-20260803').then((r) => r.json()),
+  fetch('./daily-sets.2026.json?v=verified-2025-final-20260803').then((r) => r.json()),
+  fetch('./questions.2025.json?v=verified-2025-final-20260803').then((r) => r.json()),
+  fetch('./daily-sets.2025.json?v=verified-2025-final-20260803').then((r) => r.json()),
 ]);
 const questions = [...questions2026, ...questions2025];
 const questionById = new Map(questions.filter((q) => q.enabled).map((q) => [q.id, q]));
