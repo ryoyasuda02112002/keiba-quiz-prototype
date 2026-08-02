@@ -15,6 +15,7 @@ if (attempt && attempt.answers.some((answer) => !questionById.has(answer.questio
   attempt = null;
 }
 let route = attempt?.completedAt ? 'summary' : attempt ? 'quiz' : 'home';
+let homeStep = 'modes';
 
 // 画面遷移はブラウザ履歴にも記録し、戻る操作で開始画面へ安全に復帰できるようにする。
 history.replaceState({ route }, '', location.href);
@@ -31,8 +32,26 @@ const getCurrent = () => { const answer = attempt.answers[attempt.currentPositio
 
 function home() {
   const existing = loadAttempt(dateKey);
-  shell(`<section class="card hero"><span class="badge">身内テスト版</span><h2>2026年 JRA G1馬券圏内馬</h2><p>戦績とヒントから、競走馬の名前を当てる5問クイズです。少ないヒントほど高得点。</p><dl class="meta"><div><dt>問題数</dt><dd>5問</dd></div><div><dt>最大得点</dt><dd>5,000点</dd></div><div><dt>基準日</dt><dd>問題ごとに表示</dd></div></dl><button class="primary" id="start">${existing ? '今日のクイズを再開' : '今日の5問を始める'}</button></section><section class="card"><h2>遊び方</h2><ol><li>通算成績・G1成績・騎手から推理します。</li><li>必要なら5種類のヒントを開きます。</li><li>すべてのヒント後は頭文字で救済できます。</li><li>誤答は1回50点減点。ギブアップは0点です。</li></ol><p class="notice">データ訂正や感想は、共有者へお知らせください。</p></section>`);
-  document.querySelector('#start').onclick = () => { attempt = existing ?? createAttempt(dateKey, setIds); save(); navigate('quiz'); };
+  if (homeStep === 'years') {
+    const years = [2020, 2021, 2022, 2023, 2024, 2025, 2026].map((year) => year === 2026
+      ? `<button class="primary year-button" data-year="2026">2026年版を始める</button>`
+      : `<button class="secondary year-button" disabled>${year}年版 <small>Coming soon</small></button>`).join('');
+    shell(`<section class="card hero"><span class="badge">単年・G1馬券圏内馬</span><h2>対象年を選択</h2><p>対象年にJRA G1で馬券圏内に入った馬から出題します。</p><div class="mode-grid">${years}</div><button class="text-button" id="back-to-modes">← モード選択へ戻る</button></section>`);
+    document.querySelector('[data-year="2026"]').onclick = () => { attempt = existing ?? createAttempt(dateKey, setIds); save(); navigate('quiz'); };
+    document.querySelector('#back-to-modes').onclick = () => { homeStep = 'modes'; render(); };
+    return;
+  }
+  const modes = [
+    ['単年・G1馬券圏内馬', '対象年を選んで遊ぶ', true],
+    ['単年・G1勝利馬', 'Coming soon', false],
+    ['単年・重賞馬券圏内馬', 'Coming soon', false],
+    ['総合・G1勝利馬', 'Coming soon', false],
+    ['総合・G1馬券圏内馬', 'Coming soon', false],
+    ['総合・重賞馬券圏内馬', 'Coming soon', false],
+  ].map(([title, note, enabled]) => `<button class="mode-card ${enabled ? 'available' : ''}" ${enabled ? 'id="year-mode"' : 'disabled'}><strong>${title}</strong><span>${note}</span></button>`).join('');
+  shell(`<section class="card hero"><span class="badge">身内テスト版</span><h2>モードを選択</h2><p>現在は「単年・G1馬券圏内馬」の2026年版のみ公開中です。</p><div class="mode-grid">${modes}</div>${existing ? '<button class="text-button" id="resume">前回のクイズを再開</button>' : ''}</section><section class="card"><h2>遊び方</h2><ol><li>通算成績・G1成績・騎手から推理します。</li><li>必要なら5種類のヒントを開きます。</li><li>すべてのヒント後は頭文字で救済できます。</li><li>誤答は1回50点減点。ギブアップは0点です。</li></ol><p class="notice">データ訂正や感想は、共有者へお知らせください。</p></section>`);
+  document.querySelector('#year-mode').onclick = () => { homeStep = 'years'; render(); };
+  document.querySelector('#resume')?.addEventListener('click', () => navigate('quiz'));
 }
 
 function quiz() {
