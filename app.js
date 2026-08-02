@@ -9,12 +9,25 @@ const [questions, dailySets] = await Promise.all([
 const questionById = new Map(questions.filter((q) => q.enabled).map((q) => [q.id, q]));
 const dateKey = japanDateKey();
 const setIds = dailySets[dateKey] ?? dailySets.default;
-let attempt = loadAttempt(dateKey);
-if (attempt && attempt.answers.some((answer) => !questionById.has(answer.questionId))) {
-  clearAttempt(dateKey);
-  attempt = null;
-}
-let route = attempt?.completedAt ? 'summary' : attempt ? 'quiz' : 'home';
+const YEAR_2025_INITIAL = [
+  { id: 'jra_g1_2026_2020103307', result: 'フェブラリーS 1着' },
+  { id: 'jra_g1_2026_2019101700', result: '高松宮記念 1着' },
+  { id: 'jra_g1_2026_2022105185', result: '桜花賞 1着、秋華賞 1着' },
+  { id: 'jra_g1_2026_2022105402', result: 'オークス 1着' },
+  { id: 'jra_g1_2026_2022105102', result: '日本ダービー 1着' },
+];
+const MODE_DEFINITIONS = Object.freeze({
+  winners: { title: '単年・G1勝利馬', difficulty: '初級', target: 'G1勝利馬' },
+  podium: { title: '単年・G1馬券圏内馬', difficulty: '中級', target: 'G1で3着内の馬' },
+});
+const winnerIds2026 = questions.filter((question) => / 1着[、。]/.test(question.explanation)).map((question) => question.id);
+const rotate = (ids, offset) => ids.map((_, index) => ids[(index + offset) % ids.length]);
+const dateOffset = [...dateKey].reduce((sum, character) => sum + character.charCodeAt(0), 0);
+let attempt = null;
+let attemptKey = null;
+let selectedMode = null;
+let selectedYear = null;
+let route = 'home';
 let homeStep = 'modes';
 
 // netkeibaの騎手ページで使われている表記へ統一する。
@@ -53,6 +66,39 @@ const latestCondition = (value) => {
   const match = String(value).match(/(?:^|\/\s*)(芝|ダ)(\d{3,4})(?:\s*\/|\s*$)/);
   return match ? `${match[1]}/${match[2]}m` : '芝・ダート／距離の情報なし';
 };
+const modeTarget = () => `${selectedYear}年のJRA平地G1${selectedMode === 'winners' ? '勝利馬' : 'で3着内'}`;
+const questionIdsFor = (mode, year) => {
+  if (year === 2025) return YEAR_2025_INITIAL.map(({ id }) => id);
+  if (mode === 'winners') return rotate(winnerIds2026, dateOffset).slice(0, 5);
+  return setIds;
+};
+const achievementFor = (questionId) => YEAR_2025_INITIAL.find(({ id }) => id === questionId)?.result;
+const quizQuestion = (question) => {
+  const achievement = selectedYear === 2025 ? achievementFor(question.id) : null;
+  return {
+    ...question,
+    initial: { ...question.initial, eligibility: modeTarget() },
+    explanation: achievement ? `2025年JRA平地G1での実績：${achievement}。` : question.explanation,
+  };
+};
+const startQuiz = (mode, year) => {
+  selectedMode = mode;
+  selectedYear = year;
+  attemptKey = `${dateKey}:${mode}:${year}`;
+  attempt = loadAttempt(attemptKey);
+  const questionIds = questionIdsFor(mode, year);
+  if (attempt && attempt.answers.some((answer) => !questionById.has(answer.questionId))) {
+    clearAttempt(attemptKey);
+    attempt = null;
+  }
+  if (!attempt) {
+    attempt = createAttempt(dateKey, questionIds);
+    attempt.mode = mode;
+    attempt.year = year;
+  }
+  saveAttempt(attemptKey, attempt);
+  navigate(attempt.completedAt ? 'summary' : 'quiz');
+};
 
 // 画面遷移はブラウザ履歴にも記録し、戻る操作で開始画面へ安全に復帰できるようにする。
 history.replaceState({ route }, '', location.href);
@@ -63,36 +109,36 @@ const navigate = (nextRoute, { replace = false } = {}) => {
 };
 
 const esc = (v) => String(v).replace(/[&<>'"]/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;' })[c]);
-const save = () => saveAttempt(attempt);
+const save = () => saveAttempt(attemptKey, attempt);
 const shell = (body) => { app.innerHTML = `<header class="site-header"><p><span>KEIBA GUESS</span><i>PROTOTYPE</i></p><h1>KEIBA GUESS</h1><div class="header-track" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b></div></header>${body}<footer>プロトタイプ版・正式ランキングなし・JRA公式サービスではありません。<br>2026年JRA平地G1の馬券圏内馬を対象にした身内検証用です。</footer>`; };
 const getCurrent = () => { const answer = attempt.answers[attempt.currentPosition]; return { answer, question: questionById.get(answer.questionId) }; };
 
 function home() {
-  const existing = loadAttempt(dateKey);
   if (homeStep === 'years') {
-    const years = [2020, 2021, 2022, 2023, 2024, 2025, 2026].map((year) => year === 2026
-      ? `<button class="primary year-button" data-year="2026">2026年版を始める</button>`
+    const years = [2020, 2021, 2022, 2023, 2024, 2025, 2026].map((year) => [2025, 2026].includes(year)
+      ? `<button class="primary year-button" data-year="${year}">${year}年版を始める</button>`
       : `<button class="secondary year-button" disabled>${year}年版 <small>Coming soon</small></button>`).join('');
-    shell(`<section class="card hero"><span class="badge">単年・G1馬券圏内馬</span><h2>対象年を選択</h2><p>対象年にJRA G1で馬券圏内に入った馬から出題します。</p><div class="mode-grid">${years}</div><button class="text-button" id="back-to-modes">← モード選択へ戻る</button></section>`);
-    document.querySelector('[data-year="2026"]').onclick = () => { attempt = existing ?? createAttempt(dateKey, setIds); save(); navigate('quiz'); };
+    const definition = MODE_DEFINITIONS[selectedMode];
+    shell(`<section class="card hero"><span class="badge">${definition.title}・${definition.difficulty}</span><h2>対象年を選択</h2><p>対象年にJRA平地G1で${definition.target}から出題します。2025年は初期収録の5頭で検証できます。</p><div class="mode-grid">${years}</div><button class="text-button" id="back-to-modes">← モード選択へ戻る</button></section>`);
+    document.querySelectorAll('[data-year]').forEach((button) => { button.onclick = () => startQuiz(selectedMode, Number(button.dataset.year)); });
     document.querySelector('#back-to-modes').onclick = () => { homeStep = 'modes'; render(); };
     return;
   }
   const modes = [
-    ['単年・G1勝利馬', '初級', 'Coming soon', false],
-    ['単年・G1馬券圏内馬', '中級', '対象年を選んで遊ぶ', true],
-    ['単年・重賞馬券圏内馬', '上級', 'Coming soon', false],
-    ['総合・G1勝利馬', '中級', 'Coming soon', false],
-    ['総合・G1馬券圏内馬', '上級', 'Coming soon', false],
-    ['総合・重賞馬券圏内馬', '超上級', 'Coming soon', false],
-  ].map(([title, difficulty, note, enabled]) => `<button class="mode-card ${enabled ? 'available' : ''}" ${enabled ? 'id="year-mode"' : 'disabled'}><span class="mode-card__top"><strong>${title}</strong><em class="difficulty difficulty--${difficulty}">${difficulty}</em></span><span class="mode-card__bottom"><small>${note}</small><b>${enabled ? 'PLAY →' : 'LOCKED'}</b></span></button>`).join('');
-  shell(`<section class="card hero"><span class="badge">身内テスト版</span><h2>今日のレースを選ぼう</h2><p>知っている馬から、まだ知らない名馬まで。あなたの競馬知識に合うコースを選択。</p><div class="mode-grid">${modes}</div>${existing ? '<button class="resume-button" id="resume">▶ 前回のクイズを再開する</button>' : ''}</section><section class="howto card"><p class="caption">HOW TO PLAY</p><h2>少ないヒントで、馬名を見抜け。</h2><ol><li><b>戦績</b>と騎手から、まずは一頭を絞り込む</li><li>迷ったらヒントを使う。使うほど得点は下がる</li><li>5問の合計スコアで、今日の自分に挑戦</li></ol><div class="definition-note"><p class="caption">DATA RULES</p><p><b>G1</b>：国際G1（海外で実施される国際G1、および東京大賞典を含む）。<br><b>重賞</b>：国内外の重賞（G1・G2・G3等）。JpnI・JpnII・JpnIIIなどの地方重賞は含みません。</p></div><p class="notice">データ訂正や感想は、共有者へお知らせください。</p></section>`);
-  document.querySelector('#year-mode').onclick = () => { homeStep = 'years'; render(); };
-  document.querySelector('#resume')?.addEventListener('click', () => navigate('quiz'));
+    ['winners', '単年・G1勝利馬', '初級', '2025・2026年を選んで遊ぶ', true],
+    ['podium', '単年・G1馬券圏内馬', '中級', '2025・2026年を選んで遊ぶ', true],
+    [null, '単年・重賞馬券圏内馬', '上級', 'Coming soon', false],
+    [null, '総合・G1勝利馬', '中級', 'Coming soon', false],
+    [null, '総合・G1馬券圏内馬', '上級', 'Coming soon', false],
+    [null, '総合・重賞馬券圏内馬', '超上級', 'Coming soon', false],
+  ].map(([id, title, difficulty, note, enabled]) => `<button class="mode-card ${enabled ? 'available' : ''}" ${enabled ? `data-mode="${id}"` : 'disabled'}><span class="mode-card__top"><strong>${title}</strong><em class="difficulty difficulty--${difficulty}">${difficulty}</em></span><span class="mode-card__bottom"><small>${note}</small><b>${enabled ? 'PLAY →' : 'LOCKED'}</b></span></button>`).join('');
+  shell(`<section class="card hero"><span class="badge">身内テスト版</span><h2>今日のレースを選ぼう</h2><p>知っている馬から、まだ知らない名馬まで。あなたの競馬知識に合うコースを選択。</p><div class="mode-grid">${modes}</div></section><section class="howto card"><p class="caption">HOW TO PLAY</p><h2>少ないヒントで、馬名を見抜け。</h2><ol><li><b>戦績</b>と騎手から、まずは一頭を絞り込む</li><li>迷ったらヒントを使う。使うほど得点は下がる</li><li>5問の合計スコアで、今日の自分に挑戦</li></ol><div class="definition-note"><p class="caption">DATA RULES</p><p><b>G1</b>：国際G1（海外で実施される国際G1、および東京大賞典を含む）。<br><b>重賞</b>：国内外の重賞（G1・G2・G3等）。JpnI・JpnII・JpnIIIなどの地方重賞は含みません。</p></div><p class="notice">2025年版は、公式結果で確認した初期収録5頭による検証セットです。</p></section>`);
+  document.querySelectorAll('[data-mode]').forEach((button) => { button.onclick = () => { selectedMode = button.dataset.mode; homeStep = 'years'; render(); }; });
 }
 
 function quiz() {
-  const { question, answer } = getCurrent();
+  const { question: rawQuestion, answer } = getCurrent();
+  const question = quizQuestion(rawQuestion);
   const currentScore = scoreQuestion({ correct: true, ...answer });
   const hintValue = (id) => {
     if (id === 'H2') return `最多騎乗騎手：${displayJockeyName(question.initial.jockeys[0])}`;
@@ -128,7 +174,7 @@ function quiz() {
 function complete(result) { const { answer } = getCurrent(); answer.result = result; answer.score = scoreQuestion({ correct: result === 'correct', ...answer }); answer.completedAt = new Date().toISOString(); save(); navigate('result'); }
 
 function result() {
-  const { question, answer } = getCurrent(); const correct = answer.result === 'correct';
+  const { question: rawQuestion, answer } = getCurrent(); const question = quizQuestion(rawQuestion); const correct = answer.result === 'correct';
   shell(`<section class="card result ${correct ? 'success' : 'gave-up'}"><p class="result-label">${correct ? '正解！' : '今回はギブアップ'}</p><h2>${esc(question.answer.nameJa)}</h2><p class="score">${answer.score}点</p><dl class="meta"><div><dt>使用ヒント</dt><dd>${answer.revealedHints.length}件${answer.usedFirstCharacter ? ' + 頭文字' : ''}</dd></div><div><dt>誤答</dt><dd>${answer.wrongAnswerCount}回</dd></div></dl><hr><p>${esc(question.explanation)}</p><p class="small">集計基準日: ${esc(question.initial.asOfDate)}</p><button id="next" class="primary">${attempt.currentPosition === 4 ? '総合結果へ' : '次の問題へ'}</button></section>`);
   document.querySelector('#next').onclick = () => { if (attempt.currentPosition === 4) { attempt.completedAt = new Date().toISOString(); save(); navigate('summary'); } else { attempt.currentPosition += 1; save(); navigate('quiz'); } };
 }
@@ -137,8 +183,8 @@ function summary() {
   const elapsed = Math.max(0, new Date(attempt.completedAt).getTime() - new Date(attempt.startedAt).getTime());
   const items = attempt.answers.map((a, i) => `<li><span>第${i + 1}問</span><strong>${a.result === 'correct' ? '正解' : 'ギブアップ'}</strong><b>${a.score ?? 0}点</b></li>`).join('');
   shell(`<section class="card summary"><span class="badge">今日の結果</span><h2>${correctCount(attempt)} / 5問 正解</h2><p class="final-score">${totalScore(attempt).toLocaleString()}<small> / 5,000点</small></p><ul class="score-list">${items}</ul><dl class="meta"><div><dt>通常ヒント</dt><dd>${attempt.answers.reduce((n,a) => n + a.revealedHints.length, 0)}件</dd></div><div><dt>頭文字</dt><dd>${attempt.answers.filter((a) => a.usedFirstCharacter).length}件</dd></div><div><dt>所要時間</dt><dd>${Math.floor(elapsed / 60000)}分${Math.floor(elapsed / 1000) % 60}秒</dd></div></dl><div class="button-row"><button id="share" class="primary">結果を共有</button><button id="reset" class="secondary">最初から確認する</button></div><p class="notice">この版は実在馬データによる身内検証用です。結果は正式ランキングには使われません。</p></section>`);
-  document.querySelector('#share').onclick = async () => { const text = `KEIBA GUESS ${dateKey}\n2026年 JRA G1馬券圏内馬\n\n正解 ${correctCount(attempt)}/5\nスコア ${totalScore(attempt).toLocaleString()} / 5,000\n${attempt.answers.map((a) => a.result === 'correct' ? '🟩' : '🟥').join(' ')}\n\nプロトタイプ版`; try { if (navigator.share) await navigator.share({ title: 'KEIBA GUESS', text }); else { await navigator.clipboard.writeText(text); alert('結果をコピーしました。'); } } catch (e) { if (e.name !== 'AbortError') alert('共有できませんでした。'); } };
-  document.querySelector('#reset').onclick = () => { clearAttempt(dateKey); attempt = null; navigate('home'); };
+  document.querySelector('#share').onclick = async () => { const text = `KEIBA GUESS ${dateKey}\n${selectedYear}年 ${MODE_DEFINITIONS[selectedMode].title}\n\n正解 ${correctCount(attempt)}/5\nスコア ${totalScore(attempt).toLocaleString()} / 5,000\n${attempt.answers.map((a) => a.result === 'correct' ? '🟩' : '🟥').join(' ')}\n\nプロトタイプ版`; try { if (navigator.share) await navigator.share({ title: 'KEIBA GUESS', text }); else { await navigator.clipboard.writeText(text); alert('結果をコピーしました。'); } } catch (e) { if (e.name !== 'AbortError') alert('共有できませんでした。'); } };
+  document.querySelector('#reset').onclick = () => { clearAttempt(attemptKey); attempt = null; selectedMode = null; selectedYear = null; navigate('home'); };
 }
 
 function render() { ({ home, quiz, result, summary })[route](); }
