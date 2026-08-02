@@ -9,6 +9,13 @@
   </head>
   <body>
     <main id="app" class="app-shell"></main>
+    <script>
+      const showBootError = (error) => {
+        document.querySelector('#app').textContent = `読み込みエラー: ${error?.message ?? error}`;
+      };
+      window.addEventListener('error', (event) => showBootError(event.error ?? event.message));
+      window.addEventListener('unhandledrejection', (event) => showBootError(event.reason));
+    </script>
     <script type="module" src="app.js?v=verified-2025-latest-20260803"></script>
   </body>
 </html>
