@@ -3,10 +3,10 @@ import { clearAttempt, loadAttempt, saveAttempt } from './storage.js';
 
 const app = document.querySelector('#app');
 const [questions2026, dailySets2026, questions2025, dailySets2025] = await Promise.all([
-  fetch('https://raw.githubusercontent.com/ryoyasuda02112002/keiba-quiz-prototype/main/questions.2026.json').then((r) => r.json()),
-  fetch('https://raw.githubusercontent.com/ryoyasuda02112002/keiba-quiz-prototype/main/daily-sets.2026.json').then((r) => r.json()),
-  fetch('https://raw.githubusercontent.com/ryoyasuda02112002/keiba-quiz-prototype/main/questions.2025.json').then((r) => r.json()),
-  fetch('https://raw.githubusercontent.com/ryoyasuda02112002/keiba-quiz-prototype/main/daily-sets.2025.json').then((r) => r.json()),
+  fetch('./questions.2026.json').then((r) => r.json()),
+  fetch('./daily-sets.2026.json').then((r) => r.json()),
+  fetch('./questions.2025.json').then((r) => r.json()),
+  fetch('./daily-sets.2025.json').then((r) => r.json()),
 ]);
 const questions = [...questions2026, ...questions2025];
 const questionById = new Map(questions.filter((q) => q.enabled).map((q) => [q.id, q]));
