@@ -2,25 +2,22 @@ import { HINTS, canRevealFirstCharacter, correctCount, createAttempt, isCorrectA
 import { clearAttempt, loadAttempt, saveAttempt } from './storage.js';
 
 const app = document.querySelector('#app');
-const [questions, dailySets] = await Promise.all([
+const [questions2026, dailySets2026, questions2025, dailySets2025] = await Promise.all([
   fetch('https://raw.githubusercontent.com/ryoyasuda02112002/keiba-quiz-prototype/main/questions.2026.json').then((r) => r.json()),
   fetch('https://raw.githubusercontent.com/ryoyasuda02112002/keiba-quiz-prototype/main/daily-sets.2026.json').then((r) => r.json()),
+  fetch('https://raw.githubusercontent.com/ryoyasuda02112002/keiba-quiz-prototype/main/questions.2025.json').then((r) => r.json()),
+  fetch('https://raw.githubusercontent.com/ryoyasuda02112002/keiba-quiz-prototype/main/daily-sets.2025.json').then((r) => r.json()),
 ]);
+const questions = [...questions2026, ...questions2025];
 const questionById = new Map(questions.filter((q) => q.enabled).map((q) => [q.id, q]));
 const dateKey = japanDateKey();
-const setIds = dailySets[dateKey] ?? dailySets.default;
-const YEAR_2025_INITIAL = [
-  { id: 'jra_g1_2026_2020103307', result: 'フェブラリーS 1着' },
-  { id: 'jra_g1_2026_2019101700', result: '高松宮記念 1着' },
-  { id: 'jra_g1_2026_2022105185', result: '桜花賞 1着、秋華賞 1着' },
-  { id: 'jra_g1_2026_2022105402', result: 'オークス 1着' },
-  { id: 'jra_g1_2026_2022105102', result: '日本ダービー 1着' },
-];
+const setIds = dailySets2026[dateKey] ?? dailySets2026.default;
 const MODE_DEFINITIONS = Object.freeze({
   winners: { title: '単年・G1勝利馬', difficulty: '初級', target: 'G1勝利馬' },
   podium: { title: '単年・G1馬券圏内馬', difficulty: '中級', target: 'G1で3着内の馬' },
 });
-const winnerIds2026 = questions.filter((question) => / 1着[、。]/.test(question.explanation)).map((question) => question.id);
+const winnerIds2026 = questions2026.filter((question) => / 1着[、。]/.test(question.explanation)).map((question) => question.id);
+const winnerIds2025 = questions2025.filter((question) => / 1着[、。]/.test(question.explanation)).map((question) => question.id);
 const rotate = (ids, offset) => ids.map((_, index) => ids[(index + offset) % ids.length]);
 const dateOffset = [...dateKey].reduce((sum, character) => sum + character.charCodeAt(0), 0);
 let attempt = null;
@@ -68,17 +65,17 @@ const latestCondition = (value) => {
 };
 const modeTarget = () => `${selectedYear}年のJRA平地G1${selectedMode === 'winners' ? '勝利馬' : 'で3着内'}`;
 const questionIdsFor = (mode, year) => {
-  if (year === 2025) return YEAR_2025_INITIAL.map(({ id }) => id);
+  if (year === 2025) {
+    const source = mode === 'winners' ? winnerIds2025 : (dailySets2025[dateKey] ?? dailySets2025.default);
+    return rotate(source, dateOffset).slice(0, 5);
+  }
   if (mode === 'winners') return rotate(winnerIds2026, dateOffset).slice(0, 5);
   return setIds;
 };
-const achievementFor = (questionId) => YEAR_2025_INITIAL.find(({ id }) => id === questionId)?.result;
 const quizQuestion = (question) => {
-  const achievement = selectedYear === 2025 ? achievementFor(question.id) : null;
   return {
     ...question,
     initial: { ...question.initial, eligibility: modeTarget() },
-    explanation: achievement ? `2025年JRA平地G1での実績：${achievement}。` : question.explanation,
   };
 };
 const startQuiz = (mode, year) => {
