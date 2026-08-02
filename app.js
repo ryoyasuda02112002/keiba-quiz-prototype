@@ -3,10 +3,10 @@ import { clearAttempt, loadAttempt, saveAttempt } from './storage.js';
 
 const app = document.querySelector('#app');
 const [questions2026, dailySets2026, questions2025, dailySets2025] = await Promise.all([
-  fetch('./questions.2026.json').then((r) => r.json()),
-  fetch('./daily-sets.2026.json').then((r) => r.json()),
-  fetch('./questions.2025.json').then((r) => r.json()),
-  fetch('./daily-sets.2025.json').then((r) => r.json()),
+  fetch('./questions.2026.json?v=utf8-verified-20260803').then((r) => r.json()),
+  fetch('./daily-sets.2026.json?v=utf8-verified-20260803').then((r) => r.json()),
+  fetch('./questions.2025.json?v=utf8-verified-20260803').then((r) => r.json()),
+  fetch('./daily-sets.2025.json?v=utf8-verified-20260803').then((r) => r.json()),
 ]);
 const questions = [...questions2026, ...questions2025];
 const questionById = new Map(questions.filter((q) => q.enabled).map((q) => [q.id, q]));
@@ -118,7 +118,7 @@ function home() {
       ? `<button class="primary year-button" data-year="${year}">${year}年版を始める</button>`
       : `<button class="secondary year-button" disabled>${year}年版 <small>Coming soon</small></button>`).join('');
     const definition = MODE_DEFINITIONS[selectedMode];
-    shell(`<section class="card hero"><span class="badge">${definition.title}・${definition.difficulty}</span><h2>対象年を選択</h2><p>対象年にJRA平地G1で${definition.target}から出題します。2025年は初期収録の5頭で検証できます。</p><div class="mode-grid">${years}</div><button class="text-button" id="back-to-modes">← モード選択へ戻る</button></section>`);
+    shell(`<section class="card hero"><span class="badge">${definition.title}・${definition.difficulty}</span><h2>対象年を選択</h2><p>対象年のJRA平地G1で${definition.target}から出題します。2025年は対象馬を全頭収録済みです。</p><div class="mode-grid">${years}</div><button class="text-button" id="back-to-modes">← モード選択へ戻る</button></section>`);
     document.querySelectorAll('[data-year]').forEach((button) => { button.onclick = () => startQuiz(selectedMode, Number(button.dataset.year)); });
     document.querySelector('#back-to-modes').onclick = () => { homeStep = 'modes'; render(); };
     return;
