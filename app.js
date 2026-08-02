@@ -3,8 +3,8 @@ import { clearAttempt, loadAttempt, saveAttempt } from './storage.js';
 
 const app = document.querySelector('#app');
 const [questions, dailySets] = await Promise.all([
-  fetch('./questions.2026.json').then((r) => r.json()),
-  fetch('./daily-sets.2026.json').then((r) => r.json()),
+  fetch('https://raw.githubusercontent.com/ryoyasuda02112002/keiba-quiz-prototype/main/questions.2026.json').then((r) => r.json()),
+  fetch('https://raw.githubusercontent.com/ryoyasuda02112002/keiba-quiz-prototype/main/daily-sets.2026.json').then((r) => r.json()),
 ]);
 const questionById = new Map(questions.filter((q) => q.enabled).map((q) => [q.id, q]));
 const dateKey = japanDateKey();
