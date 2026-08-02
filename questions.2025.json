@@ -1,1848 +1,429 @@
 [
   {
-    "id": "jra_g1_2025_001",
-    "horseId": "2025-manual-001",
+    "id": "jra-g1-2025-2020103307",
+    "enabled": true,
     "answer": {
       "nameJa": "コスタノヴァ",
       "nameKana": "",
       "aliases": []
     },
     "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
+      "overallRecord": "8-2-1-4",
+      "g1Record": "2-0-0-0",
       "jockeys": [
-        "R.キング"
+        "D.レーン",
+        "C.ルメール",
+        "R.キング",
+        "横山武史",
+        "杉原誠人",
+        "K.マーカンド"
       ],
-      "asOfDate": "2025-12-28",
+      "mostRiddenJockey": "C.ルメール",
+      "asOfDate": "2026-08-03",
       "eligibility": "2025年のJRA平地G1で3着内"
     },
     "hints": {
-      "H1": "性別・年齢：牡5",
-      "H2": "直近出走：2025-02-23 フェブラリーステークス / ダ1600 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "フェブラリーステークス 1着"
-      ],
-      "H5": "直近出走：ダート/1600m"
+      "H1": "性別・馬齢：牡6",
+      "H2": "ダート/1600m",
+      "H3": "重賞通算成績：3-1-0-0",
+      "H5": "ダート/1600m"
     },
     "firstCharacter": "コ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：フェブラリーステークス 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
+    "explanation": "2025年JRA平地G1での馬券圏内実績：undefined 1着。表示データは2026-08-03時点の全キャリア集計です。",
+    "dataPolicy": "2025年のJRA平地G1での馬券内実績は出題対象を決めるためだけに使用する。各問題の通算成績・G1通算成績・重賞通算成績・騎手履歴・直近出走は、対象年に限定しない最新の全キャリア集計を使用する。"
   },
   {
-    "id": "jra_g1_2025_002",
-    "horseId": "2025-manual-002",
+    "id": "jra-g1-2025-2021104756",
+    "enabled": true,
     "answer": {
       "nameJa": "サンライズジパング",
       "nameKana": "",
       "aliases": []
     },
     "initial": {
-      "overallRecord": "0-1-0",
-      "g1Record": "0-1-0",
+      "overallRecord": "5-3-3-10",
+      "g1Record": "0-1-1-6",
       "jockeys": [
-        "幸 英明"
+        "O.マーフィー",
+        "鮫島克駿",
+        "池添謙一",
+        "坂井瑠星",
+        "武豊",
+        "幸英明",
+        "菅原明良",
+        "K.マーカンド",
+        "和田竜二",
+        "戸崎圭太"
       ],
-      "asOfDate": "2025-12-28",
+      "mostRiddenJockey": "武豊",
+      "asOfDate": "2026-08-03",
       "eligibility": "2025年のJRA平地G1で3着内"
     },
     "hints": {
-      "H1": "性別・年齢：牡4",
-      "H2": "直近出走：2025-02-23 フェブラリーステークス / ダ1600 / 2着",
-      "H3": "0-1-0",
-      "H4": [
-        "フェブラリーステークス 2着"
-      ],
-      "H5": "直近出走：ダート/1600m"
+      "H1": "性別・馬齢：牡5",
+      "H2": "ダート/1800m",
+      "H3": "重賞通算成績：1-2-1-6",
+      "H5": "ダート/1800m"
     },
     "firstCharacter": "サ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：フェブラリーステークス 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
+    "explanation": "2025年JRA平地G1での馬券圏内実績：undefined 2着。表示データは2026-08-03時点の全キャリア集計です。",
+    "dataPolicy": "2025年のJRA平地G1での馬券内実績は出題対象を決めるためだけに使用する。各問題の通算成績・G1通算成績・重賞通算成績・騎手履歴・直近出走は、対象年に限定しない最新の全キャリア集計を使用する。"
   },
   {
-    "id": "jra_g1_2025_003",
-    "horseId": "2025-manual-003",
+    "id": "jra-g1-2025-2021105615",
+    "enabled": true,
     "answer": {
       "nameJa": "ミッキーファイト",
       "nameKana": "",
       "aliases": []
     },
     "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
+      "overallRecord": "8-3-2-0",
+      "g1Record": "0-1-1-0",
       "jockeys": [
-        "戸崎 圭太"
+        "戸崎圭太",
+        "C.ルメール",
+        "津村明秀"
       ],
-      "asOfDate": "2025-12-28",
+      "mostRiddenJockey": "戸崎圭太",
+      "asOfDate": "2026-08-03",
       "eligibility": "2025年のJRA平地G1で3着内"
     },
     "hints": {
-      "H1": "性別・年齢：牡4",
-      "H2": "直近出走：2025-02-23 フェブラリーステークス / ダ1600 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "フェブラリーステークス 3着"
-      ],
-      "H5": "直近出走：ダート/1600m"
+      "H1": "性別・馬齢：牡5",
+      "H2": "ダート/2000m",
+      "H3": "重賞通算成績：2-1-2-0",
+      "H5": "ダート/2000m"
     },
     "firstCharacter": "ミ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：フェブラリーステークス 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
+    "explanation": "2025年JRA平地G1での馬券圏内実績：undefined 3着。表示データは2026-08-03時点の全キャリア集計です。",
+    "dataPolicy": "2025年のJRA平地G1での馬券内実績は出題対象を決めるためだけに使用する。各問題の通算成績・G1通算成績・重賞通算成績・騎手履歴・直近出走は、対象年に限定しない最新の全キャリア集計を使用する。"
   },
   {
-    "id": "jra_g1_2025_004",
-    "horseId": "2025-manual-004",
+    "id": "jra-g1-2025-2019101700",
+    "enabled": true,
     "answer": {
       "nameJa": "サトノレーヴ",
       "nameKana": "",
       "aliases": []
     },
     "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
+      "overallRecord": "9-5-2-4",
+      "g1Record": "2-4-2-3",
       "jockeys": [
-        "J.モレイラ"
+        "C.ルメール",
+        "R.ムーア",
+        "J.モレイラ",
+        "D.レーン",
+        "浜中俊",
+        "小崎綾也",
+        "石橋脩"
       ],
-      "asOfDate": "2025-12-28",
+      "mostRiddenJockey": "J.モレイラ",
+      "asOfDate": "2026-08-03",
       "eligibility": "2025年のJRA平地G1で3着内"
     },
     "hints": {
-      "H1": "性別・年齢：牡6",
-      "H2": "直近出走：2025-03-30 高松宮記念 / 芝1200 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "高松宮記念 1着"
-      ],
-      "H5": "直近出走：芝/1200m"
+      "H1": "性別・馬齢：牡7",
+      "H2": "芝/1200m",
+      "H3": "重賞通算成績：4-4-2-4",
+      "H5": "芝/1200m"
     },
     "firstCharacter": "サ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：高松宮記念 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
+    "explanation": "2025年JRA平地G1での馬券圏内実績：undefined 1着。表示データは2026-08-03時点の全キャリア集計です。",
+    "dataPolicy": "2025年のJRA平地G1での馬券内実績は出題対象を決めるためだけに使用する。各問題の通算成績・G1通算成績・重賞通算成績・騎手履歴・直近出走は、対象年に限定しない最新の全キャリア集計を使用する。"
   },
   {
-    "id": "jra_g1_2025_005",
-    "horseId": "2025-manual-005",
+    "id": "jra-g1-2025-2019103753",
+    "enabled": true,
     "answer": {
       "nameJa": "ナムラクレア",
       "nameKana": "",
       "aliases": []
     },
     "initial": {
-      "overallRecord": "0-1-1",
-      "g1Record": "0-1-1",
+      "overallRecord": "6-7-6-6",
+      "g1Record": "0-3-4-4",
       "jockeys": [
-        "C.ルメール"
+        "浜中俊",
+        "C.ルメール",
+        "横山武史",
+        "松山弘平",
+        "鮫島克駿"
       ],
-      "asOfDate": "2025-12-28",
+      "mostRiddenJockey": "浜中俊",
+      "asOfDate": "2026-08-03",
       "eligibility": "2025年のJRA平地G1で3着内"
     },
     "hints": {
-      "H1": "性別・年齢：牝6",
-      "H2": "直近出走：2025-09-28 スプリンターズステークス / 芝1200 / 3着",
-      "H3": "0-1-1",
-      "H4": [
-        "高松宮記念 2着",
-        "スプリンターズステークス 3着"
-      ],
-      "H5": "直近出走：芝/1200m"
+      "H1": "性別・馬齢：牝7",
+      "H2": "芝/1200m",
+      "H3": "重賞通算成績：5-7-5-6",
+      "H5": "芝/1200m"
     },
     "firstCharacter": "ナ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：高松宮記念 2着、スプリンターズステークス 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
+    "explanation": "2025年JRA平地G1での馬券圏内実績：undefined 2着、undefined 3着。表示データは2026-08-03時点の全キャリア集計です。",
+    "dataPolicy": "2025年のJRA平地G1での馬券内実績は出題対象を決めるためだけに使用する。各問題の通算成績・G1通算成績・重賞通算成績・騎手履歴・直近出走は、対象年に限定しない最新の全キャリア集計を使用する。"
   },
   {
-    "id": "jra_g1_2025_006",
-    "horseId": "2025-manual-006",
+    "id": "jra-g1-2025-2019105394",
+    "enabled": true,
     "answer": {
       "nameJa": "ママコチャ",
       "nameKana": "",
       "aliases": []
     },
     "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
+      "overallRecord": "7-6-3-12",
+      "g1Record": "1-0-1-4",
       "jockeys": [
-        "川田 将雅"
+        "武豊",
+        "川田将雅",
+        "岩田望来",
+        "鮫島克駿",
+        "松山弘平",
+        "藤岡佑介",
+        "福永祐一"
       ],
-      "asOfDate": "2025-12-28",
+      "mostRiddenJockey": "川田将雅",
+      "asOfDate": "2026-08-03",
       "eligibility": "2025年のJRA平地G1で3着内"
     },
     "hints": {
-      "H1": "性別・年齢：牝6",
-      "H2": "直近出走：2025-03-30 高松宮記念 / 芝1200 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "高松宮記念 3着"
-      ],
-      "H5": "直近出走：芝/1200m"
+      "H1": "性別・馬齢：牝7",
+      "H2": "ダート/1400m",
+      "H3": "重賞通算成績：2-4-2-9",
+      "H5": "ダート/1400m"
     },
     "firstCharacter": "マ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：高松宮記念 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
+    "explanation": "2025年JRA平地G1での馬券圏内実績：undefined 3着。表示データは2026-08-03時点の全キャリア集計です。",
+    "dataPolicy": "2025年のJRA平地G1での馬券内実績は出題対象を決めるためだけに使用する。各問題の通算成績・G1通算成績・重賞通算成績・騎手履歴・直近出走は、対象年に限定しない最新の全キャリア集計を使用する。"
   },
   {
-    "id": "jra_g1_2025_007",
-    "horseId": "2025-manual-007",
+    "id": "jra-g1-2025-2020102781",
+    "enabled": true,
     "answer": {
       "nameJa": "ベラジオオペラ",
       "nameKana": "",
       "aliases": []
     },
     "initial": {
-      "overallRecord": "1-1-0",
-      "g1Record": "1-1-0",
+      "overallRecord": "6-3-1-4",
+      "g1Record": "2-2-1-4",
       "jockeys": [
-        "横山 和生"
+        "横山和生",
+        "田辺裕信",
+        "横山武史",
+        "D.レーン"
       ],
-      "asOfDate": "2025-12-28",
+      "mostRiddenJockey": "横山和生",
+      "asOfDate": "2026-08-03",
       "eligibility": "2025年のJRA平地G1で3着内"
     },
     "hints": {
-      "H1": "性別・年齢：牡5",
-      "H2": "直近出走：2025-06-15 宝塚記念 / 芝2200 / 2着",
-      "H3": "1-1-0",
-      "H4": [
-        "大阪杯 1着",
-        "宝塚記念 2着"
-      ],
-      "H5": "直近出走：芝/2200m"
+      "H1": "性別・馬齢：牡6",
+      "H2": "芝/2000m",
+      "H3": "重賞通算成績：4-3-1-4",
+      "H5": "芝/2000m"
     },
     "firstCharacter": "ベ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：大阪杯 1着、宝塚記念 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
+    "explanation": "2025年JRA平地G1での馬券圏内実績：undefined 1着、undefined 2着。表示データは2026-08-03時点の全キャリア集計です。",
+    "dataPolicy": "2025年のJRA平地G1での馬券内実績は出題対象を決めるためだけに使用する。各問題の通算成績・G1通算成績・重賞通算成績・騎手履歴・直近出走は、対象年に限定しない最新の全キャリア集計を使用する。"
   },
   {
-    "id": "jra_g1_2025_008",
-    "horseId": "2025-manual-008",
+    "id": "jra-g1-2025-2020100157",
+    "enabled": true,
     "answer": {
       "nameJa": "ロードデルレイ",
       "nameKana": "",
       "aliases": []
     },
     "initial": {
-      "overallRecord": "0-1-0",
-      "g1Record": "0-1-0",
+      "overallRecord": "6-3-0-2",
+      "g1Record": "0-1-0-1",
       "jockeys": [
-        "西村 淳也"
+        "川田将雅",
+        "西村淳也",
+        "坂井瑠星"
       ],
-      "asOfDate": "2025-12-28",
+      "mostRiddenJockey": "坂井瑠星",
+      "asOfDate": "2026-08-03",
       "eligibility": "2025年のJRA平地G1で3着内"
     },
     "hints": {
-      "H1": "性別・年齢：牡5",
-      "H2": "直近出走：2025-04-06 大阪杯 / 芝2000 / 2着",
-      "H3": "0-1-0",
-      "H4": [
-        "大阪杯 2着"
-      ],
-      "H5": "直近出走：芝/2000m"
+      "H1": "性別・馬齢：牡6",
+      "H2": "芝/2200m",
+      "H3": "重賞通算成績：1-2-0-2",
+      "H5": "芝/2200m"
     },
     "firstCharacter": "ロ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：大阪杯 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
+    "explanation": "2025年JRA平地G1での馬券圏内実績：undefined 2着。表示データは2026-08-03時点の全キャリア集計です。",
+    "dataPolicy": "2025年のJRA平地G1での馬券内実績は出題対象を決めるためだけに使用する。各問題の通算成績・G1通算成績・重賞通算成績・騎手履歴・直近出走は、対象年に限定しない最新の全キャリア集計を使用する。"
   },
   {
-    "id": "jra_g1_2025_009",
-    "horseId": "2025-manual-009",
+    "id": "jra-g1-2025-2018105012",
+    "enabled": true,
     "answer": {
       "nameJa": "ヨーホーレイク",
       "nameKana": "",
       "aliases": []
     },
     "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
+      "overallRecord": "5-1-5-7",
+      "g1Record": "0-0-2-5",
       "jockeys": [
-        "岩田 望来"
+        "西村淳也",
+        "岩田望来",
+        "荻野極",
+        "藤岡康太",
+        "川田将雅",
+        "武豊",
+        "福永祐一"
       ],
-      "asOfDate": "2025-12-28",
+      "mostRiddenJockey": "岩田望来",
+      "asOfDate": "2026-08-03",
       "eligibility": "2025年のJRA平地G1で3着内"
     },
     "hints": {
-      "H1": "性別・年齢：牡7",
-      "H2": "直近出走：2025-04-06 大阪杯 / 芝2000 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "大阪杯 3着"
-      ],
-      "H5": "直近出走：芝/2000m"
+      "H1": "性別・馬齢：牡8",
+      "H2": "芝/2000m",
+      "H3": "重賞通算成績：3-1-5-7",
+      "H5": "芝/2000m"
     },
     "firstCharacter": "ヨ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：大阪杯 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
+    "explanation": "2025年JRA平地G1での馬券圏内実績：undefined 3着。表示データは2026-08-03時点の全キャリア集計です。",
+    "dataPolicy": "2025年のJRA平地G1での馬券内実績は出題対象を決めるためだけに使用する。各問題の通算成績・G1通算成績・重賞通算成績・騎手履歴・直近出走は、対象年に限定しない最新の全キャリア集計を使用する。"
   },
   {
-    "id": "jra_g1_2025_010",
-    "horseId": "2025-manual-010",
+    "id": "jra-g1-2025-2022105185",
+    "enabled": true,
     "answer": {
       "nameJa": "エンブロイダリー",
       "nameKana": "",
       "aliases": []
     },
     "initial": {
-      "overallRecord": "2-0-0",
-      "g1Record": "2-0-0",
+      "overallRecord": "7-1-0-3",
+      "g1Record": "3-0-0-2",
       "jockeys": [
         "C.ルメール",
         "J.モレイラ"
       ],
-      "asOfDate": "2025-12-28",
+      "mostRiddenJockey": "C.ルメール",
+      "asOfDate": "2026-08-03",
       "eligibility": "2025年のJRA平地G1で3着内"
     },
     "hints": {
-      "H1": "性別・年齢：牝3",
-      "H2": "直近出走：2025-10-19 秋華賞 / 芝2000 / 1着",
-      "H3": "2-0-0",
-      "H4": [
-        "桜花賞 1着",
-        "秋華賞 1着"
-      ],
-      "H5": "直近出走：芝/2000m"
+      "H1": "性別・馬齢：牝4",
+      "H2": "芝/1600m",
+      "H3": "重賞通算成績：5-0-0-2",
+      "H5": "芝/1600m"
     },
     "firstCharacter": "エ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：桜花賞 1着、秋華賞 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
+    "explanation": "2025年JRA平地G1での馬券圏内実績：undefined 1着、undefined 1着。表示データは2026-08-03時点の全キャリア集計です。",
+    "dataPolicy": "2025年のJRA平地G1での馬券内実績は出題対象を決めるためだけに使用する。各問題の通算成績・G1通算成績・重賞通算成績・騎手履歴・直近出走は、対象年に限定しない最新の全キャリア集計を使用する。"
   },
   {
-    "id": "jra_g1_2025_011",
-    "horseId": "2025-manual-011",
+    "id": "jra-g1-2025-2022105110",
+    "enabled": true,
     "answer": {
       "nameJa": "アルマヴェローチェ",
       "nameKana": "",
       "aliases": []
     },
     "initial": {
-      "overallRecord": "0-2-0",
-      "g1Record": "0-2-0",
+      "overallRecord": "2-3-0-0",
+      "g1Record": "1-2-0-0",
       "jockeys": [
-        "岩田 望来"
+        "岩田望来",
+        "横山武史"
       ],
-      "asOfDate": "2025-12-28",
+      "mostRiddenJockey": "岩田望来",
+      "asOfDate": "2026-08-03",
       "eligibility": "2025年のJRA平地G1で3着内"
     },
     "hints": {
-      "H1": "性別・年齢：牝3",
-      "H2": "直近出走：2025-05-25 優駿牝馬（オークス） / 芝2400 / 2着",
-      "H3": "0-2-0",
-      "H4": [
-        "桜花賞 2着",
-        "優駿牝馬（オークス） 2着"
-      ],
-      "H5": "直近出走：芝/2400m"
+      "H1": "性別・馬齢：牝4",
+      "H2": "芝/2400m",
+      "H3": "重賞通算成績：1-3-0-0",
+      "H5": "芝/2400m"
     },
     "firstCharacter": "ア",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：桜花賞 2着、優駿牝馬（オークス） 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
+    "explanation": "2025年JRA平地G1での馬券圏内実績：undefined 2着、undefined 2着。表示データは2026-08-03時点の全キャリア集計です。",
+    "dataPolicy": "2025年のJRA平地G1での馬券内実績は出題対象を決めるためだけに使用する。各問題の通算成績・G1通算成績・重賞通算成績・騎手履歴・直近出走は、対象年に限定しない最新の全キャリア集計を使用する。"
   },
   {
-    "id": "jra_g1_2025_012",
-    "horseId": "2025-manual-012",
+    "id": "jra-g1-2025-2022105815",
+    "enabled": true,
     "answer": {
       "nameJa": "リンクスティップ",
       "nameKana": "",
       "aliases": []
     },
     "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
+      "overallRecord": "1-2-1-5",
+      "g1Record": "0-0-1-2",
       "jockeys": [
+        "西村淳也",
+        "R.キング",
+        "C.デムーロ",
+        "北村友一",
         "M.デムーロ"
       ],
-      "asOfDate": "2025-12-28",
+      "mostRiddenJockey": "C.デムーロ、M.デムーロ（各3戦）",
+      "asOfDate": "2026-08-03",
       "eligibility": "2025年のJRA平地G1で3着内"
     },
     "hints": {
-      "H1": "性別・年齢：牝3",
-      "H2": "直近出走：2025-04-13 桜花賞 / 芝1600 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "桜花賞 3着"
-      ],
-      "H5": "直近出走：芝/1600m"
+      "H1": "性別・馬齢：牝4",
+      "H2": "芝/2000m",
+      "H3": "重賞通算成績：0-1-1-4",
+      "H5": "芝/2000m"
     },
     "firstCharacter": "リ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：桜花賞 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
+    "explanation": "2025年JRA平地G1での馬券圏内実績：undefined 3着。表示データは2026-08-03時点の全キャリア集計です。",
+    "dataPolicy": "2025年のJRA平地G1での馬券内実績は出題対象を決めるためだけに使用する。各問題の通算成績・G1通算成績・重賞通算成績・騎手履歴・直近出走は、対象年に限定しない最新の全キャリア集計を使用する。"
   },
   {
-    "id": "jra_g1_2025_013",
-    "horseId": "2025-manual-013",
+    "id": "jra-g1-2025-2022105081",
+    "enabled": true,
     "answer": {
       "nameJa": "ミュージアムマイル",
       "nameKana": "",
       "aliases": []
     },
     "initial": {
-      "overallRecord": "2-1-0",
-      "g1Record": "2-1-0",
+      "overallRecord": "5-2-1-3",
+      "g1Record": "2-2-0-2",
       "jockeys": [
+        "D.レーン",
         "C.デムーロ",
-        "J.モレイラ"
+        "戸崎圭太",
+        "J.モレイラ",
+        "幸英明"
       ],
-      "asOfDate": "2025-12-28",
+      "mostRiddenJockey": "C.デムーロ",
+      "asOfDate": "2026-08-03",
       "eligibility": "2025年のJRA平地G1で3着内"
     },
     "hints": {
-      "H1": "性別・年齢：牡3",
-      "H2": "直近出走：2025-12-28 有馬記念 / 芝2500 / 1着",
-      "H3": "2-1-0",
-      "H4": [
-        "皐月賞 1着",
-        "天皇賞（秋） 2着",
-        "有馬記念 1着"
-      ],
-      "H5": "直近出走：芝/2500m"
+      "H1": "性別・馬齢：牡4",
+      "H2": "芝/2200m",
+      "H3": "重賞通算成績：3-2-0-3",
+      "H5": "芝/2200m"
     },
     "firstCharacter": "ミ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：皐月賞 1着、天皇賞（秋） 2着、有馬記念 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_014",
-    "horseId": "2025-manual-014",
-    "answer": {
-      "nameJa": "クロワデュノール",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-1-0",
-      "g1Record": "1-1-0",
-      "jockeys": [
-        "北村 友一"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡3",
-      "H2": "直近出走：2025-06-01 東京優駿（日本ダービー） / 芝2400 / 1着",
-      "H3": "1-1-0",
-      "H4": [
-        "皐月賞 2着",
-        "東京優駿（日本ダービー） 1着"
-      ],
-      "H5": "直近出走：芝/2400m"
-    },
-    "firstCharacter": "ク",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：皐月賞 2着、東京優駿（日本ダービー） 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_015",
-    "horseId": "2025-manual-015",
-    "answer": {
-      "nameJa": "マスカレードボール",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-2-1",
-      "g1Record": "1-2-1",
-      "jockeys": [
-        "C.ルメール",
-        "横山 武史",
-        "坂井 瑠星"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡3",
-      "H2": "直近出走：2025-11-30 ジャパンカップ / 芝2400 / 2着",
-      "H3": "1-2-1",
-      "H4": [
-        "皐月賞 3着",
-        "東京優駿（日本ダービー） 2着",
-        "天皇賞（秋） 1着",
-        "ジャパンカップ 2着"
-      ],
-      "H5": "直近出走：芝/2400m"
-    },
-    "firstCharacter": "マ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：皐月賞 3着、東京優駿（日本ダービー） 2着、天皇賞（秋） 1着、ジャパンカップ 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_016",
-    "horseId": "2025-manual-016",
-    "answer": {
-      "nameJa": "ヘデントール",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
-      "jockeys": [
-        "D.レーン"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡4",
-      "H2": "直近出走：2025-05-04 天皇賞（春） / 芝3200 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "天皇賞（春） 1着"
-      ],
-      "H5": "直近出走：芝/3200m"
-    },
-    "firstCharacter": "ヘ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：天皇賞（春） 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_017",
-    "horseId": "2025-manual-017",
-    "answer": {
-      "nameJa": "ビザンチンドリーム",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-1-0",
-      "g1Record": "0-1-0",
-      "jockeys": [
-        "A.シュタルケ"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡4",
-      "H2": "直近出走：2025-05-04 天皇賞（春） / 芝3200 / 2着",
-      "H3": "0-1-0",
-      "H4": [
-        "天皇賞（春） 2着"
-      ],
-      "H5": "直近出走：芝/3200m"
-    },
-    "firstCharacter": "ビ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：天皇賞（春） 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_018",
-    "horseId": "2025-manual-018",
-    "answer": {
-      "nameJa": "ショウナンラプンタ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
-      "jockeys": [
-        "武 豊"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡4",
-      "H2": "直近出走：2025-05-04 天皇賞（春） / 芝3200 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "天皇賞（春） 3着"
-      ],
-      "H5": "直近出走：芝/3200m"
-    },
-    "firstCharacter": "シ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：天皇賞（春） 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_019",
-    "horseId": "2025-manual-019",
-    "answer": {
-      "nameJa": "パンジャタワー",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
-      "jockeys": [
-        "松山 弘平"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡3",
-      "H2": "直近出走：2025-05-11 NHKマイルカップ / 芝1600 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "NHKマイルカップ 1着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "パ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：NHKマイルカップ 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_020",
-    "horseId": "2025-manual-020",
-    "answer": {
-      "nameJa": "マジックサンズ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-1-0",
-      "g1Record": "0-1-0",
-      "jockeys": [
-        "武 豊"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡3",
-      "H2": "直近出走：2025-05-11 NHKマイルカップ / 芝1600 / 2着",
-      "H3": "0-1-0",
-      "H4": [
-        "NHKマイルカップ 2着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "マ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：NHKマイルカップ 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_021",
-    "horseId": "2025-manual-021",
-    "answer": {
-      "nameJa": "チェルビアット",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
-      "jockeys": [
-        "M.ディー"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝3",
-      "H2": "直近出走：2025-05-11 NHKマイルカップ / 芝1600 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "NHKマイルカップ 3着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "チ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：NHKマイルカップ 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_022",
-    "horseId": "2025-manual-022",
-    "answer": {
-      "nameJa": "アスコリピチェーノ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
-      "jockeys": [
-        "C.ルメール"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝4",
-      "H2": "直近出走：2025-05-18 ヴィクトリアマイル / 芝1600 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "ヴィクトリアマイル 1着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "ア",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：ヴィクトリアマイル 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_023",
-    "horseId": "2025-manual-023",
-    "answer": {
-      "nameJa": "クイーンズウォーク",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-1-0",
-      "g1Record": "0-1-0",
-      "jockeys": [
-        "川田 将雅"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝4",
-      "H2": "直近出走：2025-05-18 ヴィクトリアマイル / 芝1600 / 2着",
-      "H3": "0-1-0",
-      "H4": [
-        "ヴィクトリアマイル 2着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "ク",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：ヴィクトリアマイル 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_024",
-    "horseId": "2025-manual-024",
-    "answer": {
-      "nameJa": "シランケド",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
-      "jockeys": [
-        "M.デムーロ"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝5",
-      "H2": "直近出走：2025-05-18 ヴィクトリアマイル / 芝1600 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "ヴィクトリアマイル 3着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "シ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：ヴィクトリアマイル 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_025",
-    "horseId": "2025-manual-025",
-    "answer": {
-      "nameJa": "カムニャック",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
-      "jockeys": [
-        "A.シュタルケ"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝3",
-      "H2": "直近出走：2025-05-25 優駿牝馬（オークス） / 芝2400 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "優駿牝馬（オークス） 1着"
-      ],
-      "H5": "直近出走：芝/2400m"
-    },
-    "firstCharacter": "カ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：優駿牝馬（オークス） 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_026",
-    "horseId": "2025-manual-026",
-    "answer": {
-      "nameJa": "タガノアビー",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
-      "jockeys": [
-        "藤岡 佑介"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝3",
-      "H2": "直近出走：2025-05-25 優駿牝馬（オークス） / 芝2400 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "優駿牝馬（オークス） 3着"
-      ],
-      "H5": "直近出走：芝/2400m"
-    },
-    "firstCharacter": "タ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：優駿牝馬（オークス） 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_027",
-    "horseId": "2025-manual-027",
-    "answer": {
-      "nameJa": "ショウヘイ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
-      "jockeys": [
-        "C.ルメール"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡3",
-      "H2": "直近出走：2025-06-01 東京優駿（日本ダービー） / 芝2400 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "東京優駿（日本ダービー） 3着"
-      ],
-      "H5": "直近出走：芝/2400m"
-    },
-    "firstCharacter": "シ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：東京優駿（日本ダービー） 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_028",
-    "horseId": "2025-manual-028",
-    "answer": {
-      "nameJa": "ジャンタルマンタル",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "2-0-0",
-      "g1Record": "2-0-0",
-      "jockeys": [
-        "川田 将雅"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡4",
-      "H2": "直近出走：2025-11-23 マイルチャンピオンシップ / 芝1600 / 1着",
-      "H3": "2-0-0",
-      "H4": [
-        "安田記念 1着",
-        "マイルチャンピオンシップ 1着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "ジ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：安田記念 1着、マイルチャンピオンシップ 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_029",
-    "horseId": "2025-manual-029",
-    "answer": {
-      "nameJa": "ガイアフォース",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-2-0",
-      "g1Record": "0-2-0",
-      "jockeys": [
-        "横山 武史",
-        "吉村 誠之助"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡6",
-      "H2": "直近出走：2025-11-23 マイルチャンピオンシップ / 芝1600 / 2着",
-      "H3": "0-2-0",
-      "H4": [
-        "安田記念 2着",
-        "マイルチャンピオンシップ 2着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "ガ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：安田記念 2着、マイルチャンピオンシップ 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_030",
-    "horseId": "2025-manual-030",
-    "answer": {
-      "nameJa": "ソウルラッシュ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
-      "jockeys": [
-        "浜中 俊"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡7",
-      "H2": "直近出走：2025-06-08 安田記念 / 芝1600 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "安田記念 3着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "ソ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：安田記念 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_031",
-    "horseId": "2025-manual-031",
-    "answer": {
-      "nameJa": "メイショウタバル",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
-      "jockeys": [
-        "武 豊"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡4",
-      "H2": "直近出走：2025-06-15 宝塚記念 / 芝2200 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "宝塚記念 1着"
-      ],
-      "H5": "直近出走：芝/2200m"
-    },
-    "firstCharacter": "メ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：宝塚記念 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_032",
-    "horseId": "2025-manual-032",
-    "answer": {
-      "nameJa": "ジャスティンパレス",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-2",
-      "g1Record": "0-0-2",
-      "jockeys": [
-        "M.ディー",
-        "団野 大成"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡6",
-      "H2": "直近出走：2025-11-02 天皇賞（秋） / 芝2000 / 3着",
-      "H3": "0-0-2",
-      "H4": [
-        "宝塚記念 3着",
-        "天皇賞（秋） 3着"
-      ],
-      "H5": "直近出走：芝/2000m"
-    },
-    "firstCharacter": "ジ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：宝塚記念 3着、天皇賞（秋） 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_033",
-    "horseId": "2025-manual-033",
-    "answer": {
-      "nameJa": "ウインカーネリアン",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
-      "jockeys": [
-        "三浦 皇成"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡8",
-      "H2": "直近出走：2025-09-28 スプリンターズステークス / 芝1200 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "スプリンターズステークス 1着"
-      ],
-      "H5": "直近出走：芝/1200m"
-    },
-    "firstCharacter": "ウ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：スプリンターズステークス 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_034",
-    "horseId": "2025-manual-034",
-    "answer": {
-      "nameJa": "ジューンブレア",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-1-0",
-      "g1Record": "0-1-0",
-      "jockeys": [
-        "武 豊"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝4",
-      "H2": "直近出走：2025-09-28 スプリンターズステークス / 芝1200 / 2着",
-      "H3": "0-1-0",
-      "H4": [
-        "スプリンターズステークス 2着"
-      ],
-      "H5": "直近出走：芝/1200m"
-    },
-    "firstCharacter": "ジ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：スプリンターズステークス 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_035",
-    "horseId": "2025-manual-035",
-    "answer": {
-      "nameJa": "エリカエクスプレス",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-1-0",
-      "g1Record": "0-1-0",
-      "jockeys": [
-        "武 豊"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝3",
-      "H2": "直近出走：2025-10-19 秋華賞 / 芝2000 / 2着",
-      "H3": "0-1-0",
-      "H4": [
-        "秋華賞 2着"
-      ],
-      "H5": "直近出走：芝/2000m"
-    },
-    "firstCharacter": "エ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：秋華賞 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_036",
-    "horseId": "2025-manual-036",
-    "answer": {
-      "nameJa": "パラディレーヌ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-1-1",
-      "g1Record": "0-1-1",
-      "jockeys": [
-        "岩田 望来",
-        "丹内 祐次"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝3",
-      "H2": "直近出走：2025-11-16 エリザベス女王杯 / 芝2200 / 2着",
-      "H3": "0-1-1",
-      "H4": [
-        "秋華賞 3着",
-        "エリザベス女王杯 2着"
-      ],
-      "H5": "直近出走：芝/2200m"
-    },
-    "firstCharacter": "パ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：秋華賞 3着、エリザベス女王杯 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_037",
-    "horseId": "2025-manual-037",
-    "answer": {
-      "nameJa": "エネルジコ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
-      "jockeys": [
-        "C.ルメール"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡3",
-      "H2": "直近出走：2025-10-26 菊花賞 / 芝3000 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "菊花賞 1着"
-      ],
-      "H5": "直近出走：芝/3000m"
-    },
-    "firstCharacter": "エ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：菊花賞 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_038",
-    "horseId": "2025-manual-038",
-    "answer": {
-      "nameJa": "エリキング",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-1-0",
-      "g1Record": "0-1-0",
-      "jockeys": [
-        "川田 将雅"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡3",
-      "H2": "直近出走：2025-10-26 菊花賞 / 芝3000 / 2着",
-      "H3": "0-1-0",
-      "H4": [
-        "菊花賞 2着"
-      ],
-      "H5": "直近出走：芝/3000m"
-    },
-    "firstCharacter": "エ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：菊花賞 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_039",
-    "horseId": "2025-manual-039",
-    "answer": {
-      "nameJa": "エキサイトバイオ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
-      "jockeys": [
-        "荻野 極"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡3",
-      "H2": "直近出走：2025-10-26 菊花賞 / 芝3000 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "菊花賞 3着"
-      ],
-      "H5": "直近出走：芝/3000m"
-    },
-    "firstCharacter": "エ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：菊花賞 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_040",
-    "horseId": "2025-manual-040",
-    "answer": {
-      "nameJa": "レガレイラ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
-      "jockeys": [
-        "戸崎 圭太"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝4",
-      "H2": "直近出走：2025-11-16 エリザベス女王杯 / 芝2200 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "エリザベス女王杯 1着"
-      ],
-      "H5": "直近出走：芝/2200m"
-    },
-    "firstCharacter": "レ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：エリザベス女王杯 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_041",
-    "horseId": "2025-manual-041",
-    "answer": {
-      "nameJa": "ライラック",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
-      "jockeys": [
-        "藤岡 佑介"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝6",
-      "H2": "直近出走：2025-11-16 エリザベス女王杯 / 芝2200 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "エリザベス女王杯 3着"
-      ],
-      "H5": "直近出走：芝/2200m"
-    },
-    "firstCharacter": "ラ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：エリザベス女王杯 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_042",
-    "horseId": "2025-manual-042",
-    "answer": {
-      "nameJa": "ウォーターリヒト",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
-      "jockeys": [
-        "高杉 吏麒"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡4",
-      "H2": "直近出走：2025-11-23 マイルチャンピオンシップ / 芝1600 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "マイルチャンピオンシップ 3着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "ウ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：マイルチャンピオンシップ 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_043",
-    "horseId": "2025-manual-043",
-    "answer": {
-      "nameJa": "カランダガン",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
-      "jockeys": [
-        "M.バルザローナ"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：せん4",
-      "H2": "直近出走：2025-11-30 ジャパンカップ / 芝2400 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "ジャパンカップ 1着"
-      ],
-      "H5": "直近出走：芝/2400m"
-    },
-    "firstCharacter": "カ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：ジャパンカップ 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_044",
-    "horseId": "2025-manual-044",
-    "answer": {
-      "nameJa": "ダノンデサイル",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-2",
-      "g1Record": "0-0-2",
-      "jockeys": [
-        "戸崎 圭太"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡4",
-      "H2": "直近出走：2025-12-28 有馬記念 / 芝2500 / 3着",
-      "H3": "0-0-2",
-      "H4": [
-        "ジャパンカップ 3着",
-        "有馬記念 3着"
-      ],
-      "H5": "直近出走：芝/2500m"
-    },
-    "firstCharacter": "ダ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：ジャパンカップ 3着、有馬記念 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_045",
-    "horseId": "2025-manual-045",
-    "answer": {
-      "nameJa": "ダブルハートボンド",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
-      "jockeys": [
-        "坂井 瑠星"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝4",
-      "H2": "直近出走：2025-12-07 チャンピオンズカップ / ダ1800 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "チャンピオンズカップ 1着"
-      ],
-      "H5": "直近出走：ダート/1800m"
-    },
-    "firstCharacter": "ダ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：チャンピオンズカップ 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_046",
-    "horseId": "2025-manual-046",
-    "answer": {
-      "nameJa": "ウィルソンテソーロ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-1-0",
-      "g1Record": "0-1-0",
-      "jockeys": [
-        "川田 将雅"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡6",
-      "H2": "直近出走：2025-12-07 チャンピオンズカップ / ダ1800 / 2着",
-      "H3": "0-1-0",
-      "H4": [
-        "チャンピオンズカップ 2着"
-      ],
-      "H5": "直近出走：ダート/1800m"
-    },
-    "firstCharacter": "ウ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：チャンピオンズカップ 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_047",
-    "horseId": "2025-manual-047",
-    "answer": {
-      "nameJa": "ラムジェット",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
-      "jockeys": [
-        "三浦 皇成"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡4",
-      "H2": "直近出走：2025-12-07 チャンピオンズカップ / ダ1800 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "チャンピオンズカップ 3着"
-      ],
-      "H5": "直近出走：ダート/1800m"
-    },
-    "firstCharacter": "ラ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：チャンピオンズカップ 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_048",
-    "horseId": "2025-manual-048",
-    "answer": {
-      "nameJa": "スターアニス",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
-      "jockeys": [
-        "松山 弘平"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝2",
-      "H2": "直近出走：2025-12-14 阪神ジュベナイルフィリーズ / 芝1600 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "阪神ジュベナイルフィリーズ 1着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "ス",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：阪神ジュベナイルフィリーズ 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_049",
-    "horseId": "2025-manual-049",
-    "answer": {
-      "nameJa": "ギャラボーグ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-1-0",
-      "g1Record": "0-1-0",
-      "jockeys": [
-        "川田 将雅"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝2",
-      "H2": "直近出走：2025-12-14 阪神ジュベナイルフィリーズ / 芝1600 / 2着",
-      "H3": "0-1-0",
-      "H4": [
-        "阪神ジュベナイルフィリーズ 2着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "ギ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：阪神ジュベナイルフィリーズ 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_050",
-    "horseId": "2025-manual-050",
-    "answer": {
-      "nameJa": "タイセイボーグ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
-      "jockeys": [
-        "西村 淳也"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牝2",
-      "H2": "直近出走：2025-12-14 阪神ジュベナイルフィリーズ / 芝1600 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "阪神ジュベナイルフィリーズ 3着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "タ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：阪神ジュベナイルフィリーズ 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_051",
-    "horseId": "2025-manual-051",
-    "answer": {
-      "nameJa": "カヴァレリッツォ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
-      "jockeys": [
-        "C.デムーロ"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡2",
-      "H2": "直近出走：2025-12-21 朝日杯フューチュリティステークス / 芝1600 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "朝日杯フューチュリティステークス 1着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "カ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：朝日杯フューチュリティステークス 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_052",
-    "horseId": "2025-manual-052",
-    "answer": {
-      "nameJa": "ダイヤモンドノット",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-1-0",
-      "g1Record": "0-1-0",
-      "jockeys": [
-        "C.ルメール"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡2",
-      "H2": "直近出走：2025-12-21 朝日杯フューチュリティステークス / 芝1600 / 2着",
-      "H3": "0-1-0",
-      "H4": [
-        "朝日杯フューチュリティステークス 2着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "ダ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：朝日杯フューチュリティステークス 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_053",
-    "horseId": "2025-manual-053",
-    "answer": {
-      "nameJa": "アドマイヤクワッズ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
-      "jockeys": [
-        "坂井 瑠星"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡2",
-      "H2": "直近出走：2025-12-21 朝日杯フューチュリティステークス / 芝1600 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "朝日杯フューチュリティステークス 3着"
-      ],
-      "H5": "直近出走：芝/1600m"
-    },
-    "firstCharacter": "ア",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：朝日杯フューチュリティステークス 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_054",
-    "horseId": "2025-manual-054",
-    "answer": {
-      "nameJa": "ロブチェン",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "1-0-0",
-      "g1Record": "1-0-0",
-      "jockeys": [
-        "松山 弘平"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡2",
-      "H2": "直近出走：2025-12-27 ホープフルステークス / 芝2000 / 1着",
-      "H3": "1-0-0",
-      "H4": [
-        "ホープフルステークス 1着"
-      ],
-      "H5": "直近出走：芝/2000m"
-    },
-    "firstCharacter": "ロ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：ホープフルステークス 1着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_055",
-    "horseId": "2025-manual-055",
-    "answer": {
-      "nameJa": "フォルテアンジェロ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-1-0",
-      "g1Record": "0-1-0",
-      "jockeys": [
-        "T.マーカンド"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡2",
-      "H2": "直近出走：2025-12-27 ホープフルステークス / 芝2000 / 2着",
-      "H3": "0-1-0",
-      "H4": [
-        "ホープフルステークス 2着"
-      ],
-      "H5": "直近出走：芝/2000m"
-    },
-    "firstCharacter": "フ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：ホープフルステークス 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_056",
-    "horseId": "2025-manual-056",
-    "answer": {
-      "nameJa": "アスクエジンバラ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-0-1",
-      "g1Record": "0-0-1",
-      "jockeys": [
-        "岩田 康誠"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡2",
-      "H2": "直近出走：2025-12-27 ホープフルステークス / 芝2000 / 3着",
-      "H3": "0-0-1",
-      "H4": [
-        "ホープフルステークス 3着"
-      ],
-      "H5": "直近出走：芝/2000m"
-    },
-    "firstCharacter": "ア",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：ホープフルステークス 3着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  },
-  {
-    "id": "jra_g1_2025_057",
-    "horseId": "2025-manual-057",
-    "answer": {
-      "nameJa": "コスモキュランダ",
-      "nameKana": "",
-      "aliases": []
-    },
-    "initial": {
-      "overallRecord": "0-1-0",
-      "g1Record": "0-1-0",
-      "jockeys": [
-        "横山 武史"
-      ],
-      "asOfDate": "2025-12-28",
-      "eligibility": "2025年のJRA平地G1で3着内"
-    },
-    "hints": {
-      "H1": "性別・年齢：牡4",
-      "H2": "直近出走：2025-12-28 有馬記念 / 芝2500 / 2着",
-      "H3": "0-1-0",
-      "H4": [
-        "有馬記念 2着"
-      ],
-      "H5": "直近出走：芝/2500m"
-    },
-    "firstCharacter": "コ",
-    "explanation": "2025年JRA平地G1での馬券圏内実績：有馬記念 2着。",
-    "sourceNote": "JRA公式の2025年G1レース結果を個別に照合し、クイズ用の事実情報として整理。",
-    "verifiedAt": "2026-08-03",
-    "enabled": true
-  }
-]
+    "explanation": "2025年JRA平地G1での馬券圏内実績：undefined 1着、undefined 2着、undefined 1着。表示データは2026-08-03時点の全キャ��_{��$z{-���jם��Xh^Z��{���ɧV�FVf��VB>y�8V�FVf��VB>y�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" ������&�B#�&�&�s�##R�##Ss"��&V�&�VB#�G'VR��&�7vW"#���&��T�#�.8889n8:�88�8;�88�89�8;>88�"��&��T��#�""��&Ɩ6W2#��Т���&��F��#���&�fW&��&V6�&B#�#r���"��&s&V6�&B#�#���"��&��6�W�2#���.Y�.K�^yi�� ����&��7E&�FFV��6�W�#�.Y�.K�^yi��"��&4�dFFR#�###b���2"��&VƖv�&�ƗG�#�###^[�N8�$[�>Y�s8s>y�XhR ����&���G2#���$�#�.h
+~X�^8;��jΛ�.�ɮx��R"��$�"#�.888;�88��c�"��$�2#�.�xދ9�	�z�~h�{���ɣ"���"��$�R#�.888;�88��c� ����&f�'7D6�&7FW"#�.88"��&W���F���#�###^[�D�$[�>Y�s8~8�j�X��Y��Xh^Z��{���ɧV�FVf��VBy�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" ������&�B#�&�&�s�##R�#�#3�2"��&V�&�VB#�G'VR��&�7vW"#���&��T�#�.8*n8*>8:�8+�8;>88n8+�8;�8:�"��&��T��#�""��&Ɩ6W2#��Т���&��F��#���&�fW&��&V6�&B#�#Ӓ��"��&s&V6�&B#�#�b��B"��&��6�W�2#���.[y�yK[n��R"��.X��XJ�K��"��.i��[[Ɏ[�2"��.��^X��i��"��.��[;nXX��{�"��.h��[H�Y��ZJ�"��.K��kZny�~h� ����&��7E&�FFV��6�W�#�.[y�yK[n��R"��&4�dFFR#�###b���2"��&VƖv�&�ƗG�#�###^[�N8�$[�>Y�s8s>y�XhR ����&���G2#���$�#�.h
+~X�^8;��jΛ�.�ɮx�r"��$�"#�.888;�88��C�"��$�2#�.�xދ9�	�z�~h�{���ɣ�r��B"��$�R#�.888;�88��C� ����&f�'7D6�&7FW"#�.8*b"��&W���F���#�###^[�D�$[�>Y�s8~8�j�X��Y��Xh^Z��{���ɧV�FVf��VB.y�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" ������&�B#�&�&�s�##R�##ccC"��&V�&�VB#�G'VR��&�7vW"#���&��T�#�.8:�8:8+�8*~88>88�"��&��T��#�""��&Ɩ6W2#��Т���&��F��#���&�fW&��&V6�&B#�#R��Bӂ"��&s&V6�&B#�#��"�2"��&��6�W�2#���.K��kZny�~h�"��$��8:.8:�8*N8:�"��.[y�yK[n��R"��.X�~i�Z��X�� ����&��7E&�FFV��6�W�#�.K��kZny�~h�"��&4�dFFR#�###b���2"��&VƖv�&�ƗG�#�###^[�N8�$[�>Y�s8s>y�XhR ����&���G2#���$�#�.h
+~X�^8;��jΛ�.�ɮx�R"��$�"#�.888;�88��#�"��$�2#�.�xދ9�	�z�~h�{���ɣ��2�B"��$�R#�.888;�88��#� ����&f�'7D6�&7FW"#�.8:�"��&W���F���#�###^[�D�$[�>Y�s8~8�j�X��Y��Xh^Z��{���ɧV�FVf��VB>y�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" ������&�B#�&�&�s�##R�##3c�#"��&V�&�VB#�G'VR��&�7vW"#���&��T�#�.8+�8+�8;�8*.88�8+�"��&��T��#�""��&Ɩ6W2#��Т���&��F��#���&�fW&��&V6�&B#�#2���""��&s&V6�&B#�#"���"��&��6�W�2#���.i��[[Ɏ[�2 ����&��7E&�FFV��6�W�#�.i��[[Ɏ[�2"��&4�dFFR#�###b���2"��&VƖv�&�ƗG�#�###^[�N8�$[�>Y�s8s>y�XhR ����&���G2#���$�#�.h
+~X�^8;��jΛ�.�ɮx��2"��$�"#�.����#C�"��$�2#�.�xދ9�	�z�~h�{���ɣ"���"��$�R#�.����#C� ����&f�'7D6�&7FW"#�.8+�"��&W���F���#�###^[�D�$[�>Y�s8~8�j�X��Y��Xh^Z��{���ɧV�FVf��VBy�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" ������&�B#�&�&�s�##R�##3S�#R"��&V�&�VB#�G'VR��&�7vW"#���&��T�#�.8*�8:>8:�89�8;�8+"��&��T��#�""��&Ɩ6W2#��Т���&��F��#���&�fW&��&V6�&B#�#�2��"��&s&V6�&B#�#�"��"��&��6�W�2#���.�[�i�k{>K��"��.[y�yK[n��R ����&��7E&�FFV��6�W�#�.[y�yK[n��R"��&4�dFFR#�###b���2"��&VƖv�&�ƗG�#�###^[�N8�$[�>Y�s8s>y�XhR ����&���G2#���$�#�.h
+~X�^8;��jΛ�.�ɮx��2"��$�"#�.����c�"��$�2#�.�xދ9�	�z�~h�{���ɣ�"��"��$�R#�.����c� ����&f�'7D6�&7FW"#�.8*�"��&W���F���#�###^[�D�$[�>Y�s8~8�j�X��Y��Xh^Z��{���ɧV�FVf��VB.y�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" ������&�B#�&�&�s�##R�##3c�"��&V�&�VB#�G'VR��&�7vW"#���&��T�#�.8+�8*N8+�8*N89�8;�8+"��&��T��#�""��&Ɩ6W2#��Т���&��F��#���&�fW&��&V6�&B#�#"�"�"�"��&s&V6�&B#�#���"��&��6�W�2#���.�[�i�k{>K��"��.K�8^iʎZJ~��B"��.yKX�>�*�ZJ� ����&��7E&�FFV��6�W�#�.yKX�>�*�ZJ�"��&4�dFFR#�###b���2"��&VƖv�&�ƗG�#�###^[�N8�$[�>Y�s8s>y�XhR ����&���G2#���$�#�.h
+~X�^8;��jΛ�.�ɮx��2"��$�"#�.����c�"��$�2#�.�xދ9�	�z�~h�{���ɣ��"�"��$�R#�.����c� ����&f�'7D6�&7FW"#�.8+�"��&W���F���#�###^[�D�$[�>Y�s8~8�j�X��Y��Xh^Z��{���ɧV�FVf��VB>y�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" ������&�B#�&�&�s�##R�##3sS2"��&V�&�VB#�G'VR��&�7vW"#���&��T�#�.8*�8;N8*8:�8:�88>88N8*�"��&��T��#�""��&Ɩ6W2#��Т���&��F��#���&�fW&��&V6�&B#�#"���""��&s&V6�&B#�#���""��&��6�W�2#���.�[�i�k{>K��"��$B�8:�8;�8;2"��$2�88~8:8;�8:�"��.X�~i�X��K� ����&��7E&�FFV��6�W�#�$2�88~8:8;�8:�"��&4�dFFR#�###b���2"��&VƖv�&�ƗG�#�###^[�N8�$[�>Y�s8s>y�XhR ����&���G2#���$�#�.h
+~X�^8;��jΛ�.�ɮx�2"��$�"#�.����c�"��$�2#�.�xދ9�	�z�~h�{���ɣ���""��$�R#�.����c� ����&f�'7D6�&7FW"#�.8*�"��&W���F���#�###^[�D�$[�>Y�s8~8�j�X��Y��Xh^Z��{���ɧV�FVf��VBy�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" ������&�B#�&�&�s�##R�##3Sc�R"��&V�&�VB#�G'VR��&�7vW"#���&��T�#�.888*N8:N8:.8;>88�88�88>88�"��&��T��#�""��&Ɩ6W2#��Т���&��F��#���&�fW&��&V6�&B#�#2�"��""��&s&V6�&B#�#���"��&��6�W�2#���.[y�yK[n��R"��$2�8:�8:8;�8:� ����&��7E&�FFV��6�W�#�.[y�yK[n��R"��&4�dFFR#�###b���2"��&VƖv�&�ƗG�#�###^[�N8�$[�>Y�s8s>y�XhR ����&���G2#���$�#�.h
+~X�^8;��jΛ�.�ɮx�2"��$�"#�.����c�"��$�2#�.�xދ9�	�z�~h�{���ɣ"���"��$�R#�.����c� ����&f�'7D6�&7FW"#�.88"��&W���F���#�###^[�D�$[�>Y�s8~8�j�X��Y��Xh^Z��{���ɧV�FVf��VB.y�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" ������&�B#�&�&�s�##R�##3S3"��&V�&�VB#�G'VR��&�7vW"#���&��T�#�.8*.88�89�8*N8:N8*�8:�88>8+�"��&��T��#�""��&Ɩ6W2#��Т���&��F��#���&�fW&��&V6�&B#�#"��2�"��&s&V6�&B#�#��"�"��&��6�W�2#���.Y�.K�^yi�� ����&��7E&�FFV��6�W�#�.Y�.K�^yi��"��&4�dFFR#�###b���2"��&VƖv�&�ƗG�#�###^[�N8�$[�>Y�s8s>y�XhR ����&���G2#���$�#�.h
+~X�^8;��jΛ�.�ɮx�2"��$�"#�.����c�"��$�2#�.�xދ9�	�z�~h�{���ɣ��2�"��$�R#�.����c� ����&f�'7D6�&7FW"#�.8*""��&W���F���#�###^[�D�$[�>Y�s8~8�j�X��Y��Xh^Z��{���ɧV�FVf��VB>y�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" ������&�B#�&�&�s�##R�##3s��"��&V�&�VB#�G'VR��&�7vW"#���&��T�#�.8:�89n888*~8;2"��&��T��#�""��&Ɩ6W2#��Т���&��F��#���&�fW&��&V6�&B#�#B���"��&s&V6�&B#�#2���"��&��6�W�2#���.i��[[Ɏ[�2 ����&��7E&�FFV��6�W�#�.i��[[Ɏ[�2"��&4�dFFR#�###b���2"��&VƖv�&�ƗG�#�###^[�N8�$[�>Y�s8s>y�XhR ����&���G2#���$�#�.h
+~X�^8;��jΛ�.�ɮx�2"��$�"#�.����#C�"��$�2#�.�xދ9�	�z�~h�{���ɣ2���"��$�R#�.����#C� ����&f�'7D6�&7FW"#�.8:�"��&W���F���#�###^[�D�$[�>Y�s8~8�j�X��Y��Xh^Z��{���ɧV�FVf��VBy�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" ������&�B#�&�&�s�##R�##3s3CR"��&V�&�VB#�G'VR��&�7vW"#���&��T�#�.89^8*�8:�88n8*.8;>8+�8*~8:�"��&��T��#�""��&Ɩ6W2#��Т���&��F��#���&�fW&��&V6�&B#�#�"��""��&s&V6�&B#�#���""��&��6�W�2#���.�۾�x�j[R"��$��89�8;�8*�8;>88�"��.h��[H�Y��ZJ� ����&��7E&�FFV��6�W�#�.h��[H�Y��ZJ�"��&4�dFFR#�###b���2"��&VƖv�&�ƗG�#�###^[�N8�$[�>Y�s8s>y�XhR ����&���G2#���$�#�.h
+~X�^8;��jΛ�.�ɮx�2"��$�"#�.����#C�"��$�2#�.�xދ9�	�z�~h�{���ɣ���""��$�R#�.����#C� ����&f�'7D6�&7FW"#�.89R"��&W���F���#�###^[�D�$[�>Y�s8~8�j�X��Y��Xh^Z��{���ɧV�FVf��VB.y�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" ������&�B#�&�&�s�##R�##3cC"��&V�&�VB#�G'VR��&�7vW"#���&��T�#�.8*.8+�8*�8*�8+�8;>898:�"��&��T��#�""��&Ɩ6W2#��Т���&��F��#���&�fW&��&V6�&B#�#"�"��B"��&s&V6�&B#�#���""��&��6�W�2#���.[*�yK[�~��"��%"�8*�8;>8+"��.[y�yK[n��R"��.[*�yKiɾi�R ����&��7E&�FFV��6�W�#�.[*�yK[�~��"��&4�dFFR#�###b���2"��&VƖv�&�ƗG�#�###^[�N8�$[�>Y�s8s>y�XhR ����&���G2#���$�#�.h
+~X�^8;��jΛ�.�ɮx�2"��$�"#�.����#C�"��$�2#�.�xދ9�	�z�~h�{���ɣ�"��B"��$�R#�.����#C� ����&f�'7D6�&7FW"#�.8*""��&W���F���#�###^[�D�$[�>Y�s8~8�j�X��Y��Xh^Z��{���ɧV�FVf��VB>y�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" ������&�B#�&�&�s�##R�##cs�r"��&V�&�VB#�G'VR��&�7vW"#���&��T�#�.8+>8+�8:.8*�8:^8:�8;>88"��&��T��#�""��&Ɩ6W2#��Т���&��F��#���&�fW&��&V6�&B#�#"�R��2"��&s&V6�&B#�#�"��b"��&��6�W�2#���.j��[j�nX�""��.K��Xh^zYj�"��.kJ^i�i��zx"��$��88~8:8;�8:�"��$��8:.8:�8*N8:�"��.�y.yKZJ~k+2"��.h��[H�Y��ZJ� ����&��7E&�FFV��6�W�#�.K��Xh^zYj�"��&4�dFFR#�###b���2"��&VƖv�&�ƗG�#�###^[�N8�$[�>Y�s8s>y�XhR ����&���G2#���$�#�.h
+~X�^8;��jΛ�.�ɮx�R"��$�"#�.����##�"��$�2#�.�xދ9�	�z�~h�{���ɣ�2��"��$�R#�.����##� ����&f�'7D6�&7FW"#�.8+2"��&W���F���#�###^[�D�$[�>Y�s8~8�j�X��Y��Xh^Z��{���ɧV�FVf��VB.y�8.��zK�88~8;�8+�8�##b���>i�.x+�8�XZ�8*�8:>8:�8*.��n���8~8�8""��&FF�Ɩ7�#�###^[�N8�$[�>Y�s8~8�j�X��Xh^Z��{��8�X{���Z��8).k�8(8(�8�8(888�K��yJ�8�8(�8.YNYX���8�	�z�~h�{��8;�s�	�z�~h�{��8;��xދ9�	�z�~h�{��8;����h��[^j�N8;�y�N��X{��[8�8Z��[�N8���Z�8~8�8Ni�ik8�XZ�8*�8:>8:�8*.��n���8).K��yJ�8�8(�8" �Х�
