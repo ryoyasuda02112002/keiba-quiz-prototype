@@ -18,6 +18,7 @@ const MODE_DEFINITIONS = Object.freeze({
 });
 const winnerIds2026 = questions2026.filter((question) => / 1着[、。]/.test(question.explanation)).map((question) => question.id);
 const winnerIds2025 = questions2025.filter((question) => / 1着[、。]/.test(question.explanation)).map((question) => question.id);
+const podiumIds2025 = questions2025.map((question) => question.id);
 const rotate = (ids, offset) => ids.map((_, index) => ids[(index + offset) % ids.length]);
 const dateOffset = [...dateKey].reduce((sum, character) => sum + character.charCodeAt(0), 0);
 let attempt = null;
@@ -66,7 +67,7 @@ const latestCondition = (value) => {
 const modeTarget = () => `${selectedYear}年のJRA平地G1${selectedMode === 'winners' ? '勝利馬' : 'で3着内'}`;
 const questionIdsFor = (mode, year) => {
   if (year === 2025) {
-    const source = mode === 'winners' ? winnerIds2025 : (dailySets2025[dateKey] ?? dailySets2025.default);
+    const source = mode === 'winners' ? winnerIds2025 : podiumIds2025;
     return rotate(source, dateOffset).slice(0, 5);
   }
   if (mode === 'winners') return rotate(winnerIds2026, dateOffset).slice(0, 5);
@@ -129,13 +130,17 @@ function home() {
     [null, '総合・G1馬券圏内馬', '上級', 'Coming soon', false],
     [null, '総合・重賞馬券圏内馬', '超上級', 'Coming soon', false],
   ].map(([id, title, difficulty, note, enabled]) => `<button class="mode-card ${enabled ? 'available' : ''}" ${enabled ? `data-mode="${id}"` : 'disabled'}><span class="mode-card__top"><strong>${title}</strong><em class="difficulty difficulty--${difficulty}">${difficulty}</em></span><span class="mode-card__bottom"><small>${note}</small><b>${enabled ? 'PLAY →' : 'LOCKED'}</b></span></button>`).join('');
-  shell(`<section class="card hero"><span class="badge">身内テスト版</span><h2>毎日の5問で、馬名を見抜け。</h2><p>戦績と騎手から馬名を推理し、迷ったらヒントを使おう。少ないヒントで5問の合計スコアに挑戦。<br><b>毎日のクイズは24時（日本時間）に更新されます。</b></p><div class="mode-grid">${modes}</div></section><section class="howto card"><p class="caption">HOW TO PLAY</p><h2>少ないヒントで、馬名を見抜け。</h2><ol><li><b>戦績</b>と騎手から、まずは一頭を絞り込む</li><li>迷ったらヒントを使う。使うほど得点は下がる</li><li>5問の合計スコアで、今日の自分に挑戦</li></ol><div class="definition-note"><p class="caption">DATA RULES</p><p><b>G1</b>：国際G1（海外で実施される国際G1、および東京大賞典を含む）。<br><b>重賞</b>：国内外の重賞（G1・G2・G3等）。JpnI・JpnII・JpnIIIなどの地方重賞は含みません。</p></div><p class="notice">2025年版は、公式結果で確認した初期収録5頭による検証セットです。</p></section>`);
+  shell(`<section class="card hero"><span class="badge">身内テスト版</span><h2>毎日の5問で、馬名を見抜け。</h2><p>戦績と騎手から馬名を推理し、迷ったらヒントを使おう。少ないヒントで5問の合計スコアに挑戦。<br><b>毎日のクイズは24時（日本時間）に更新されます。</b></p><div class="mode-grid">${modes}</div></section><section class="howto card"><p class="caption">HOW TO PLAY</p><h2>少ないヒントで、馬名を見抜け。</h2><ol><li><b>戦績</b>と騎手から、まずは一頭を絞り込む</li><li>迷ったらヒントを使う。使うほど得点は下がる</li><li>5問の合計スコアで、今日の自分に挑戦</li></ol><div class="definition-note"><p class="caption">DATA RULES</p><p><b>G1</b>：国際G1（海外で実施される国際G1、および東京大賞典を含む）。<br><b>重賞</b>：国内外の重賞（G1・G2・G3等）。JpnI・JpnII・JpnIIIなどの地方重賞は含みません。</p></div><p class="notice">2025年版は、障害G1を除くJRA平地G1全24レースの馬券内馬57頭を収録しています。</p></section>`);
   document.querySelectorAll('[data-mode]').forEach((button) => { button.onclick = () => { selectedMode = button.dataset.mode; homeStep = 'years'; render(); }; });
 }
 
 function quiz() {
   const { question: rawQuestion, answer } = getCurrent();
   const question = quizQuestion(rawQuestion);
+  const isYearArchive = selectedYear === 2025;
+  const recordLabel = isYearArchive ? '2025年G1馬券内実績' : '通算成績';
+  const g1RecordLabel = isYearArchive ? '内訳（1着-2着-3着）' : 'G1通算成績';
+  const jockeyLabel = isYearArchive ? '馬券内時の騎乗騎手' : '騎乗騎手';
   const currentScore = scoreQuestion({ correct: true, ...answer });
   const hintValue = (id) => {
     if (id === 'H2') return `最多騎乗騎手：${displayJockeyName(question.initial.jockeys[0])}`;
@@ -149,7 +154,7 @@ function quiz() {
   const uniqueJockeys = [...new Set(question.initial.jockeys.map(displayJockeyName))];
   if (!answer.jockeyDisplayOrder) answer.jockeyDisplayOrder = shuffled(uniqueJockeys);
   const jockeys = answer.jockeyDisplayOrder;
-  shell(`<section class="quiz-head"><span>第${attempt.currentPosition + 1}問 / 5問</span><strong>現在の得点 ${currentScore}点</strong><button class="text-button back-home" id="back-home">← ホームへ戻る</button></section><section class="card"><p class="caption">この馬は誰？</p><dl class="facts"><div><dt>通算成績</dt><dd>${esc(question.initial.overallRecord)}</dd></div><div><dt>G1通算成績</dt><dd>${esc(question.initial.g1Record)}</dd></div><div><dt>騎乗騎手<br><small>表示順はランダムです</small></dt><dd>${jockeys.map(esc).join('、')}</dd></div><div><dt>集計基準日</dt><dd>${esc(question.initial.asOfDate)}</dd></div><div><dt>対象条件</dt><dd>${esc(question.initial.eligibility)}</dd></div></dl></section><section class="hint-section"><div class="hint-section__head"><p class="caption">HINTS</p><p>ヒントを開くほど、獲得できる点数は下がります。</p></div><div class="hint-grid">${hints}</div></section><section class="card rescue"><button class="secondary" id="first" ${firstReady && !answer.usedFirstCharacter ? '' : 'disabled'}>${answer.usedFirstCharacter ? `頭文字：${esc(question.firstCharacter)}` : '頭文字を表示（−150点）'}</button><p>${firstReady ? '最後の救済ヒントです。' : '通常ヒントをすべて開くと使えます。'}</p></section><section class="card"><label for="answer">馬名を入力</label><input id="answer" autocomplete="off" placeholder="例：サンプルホース" /><p class="error" id="message" role="alert"></p><div class="button-row"><button id="submit" class="primary">回答する</button><button id="giveup" class="text-button">ギブアップ（0点）</button></div><p class="small">誤答: ${answer.wrongAnswerCount}回（1回につき−50点）</p></section>`);
+  shell(`<section class="quiz-head"><span>第${attempt.currentPosition + 1}問 / 5問</span><strong>現在の得点 ${currentScore}点</strong><button class="text-button back-home" id="back-home">← ホームへ戻る</button></section><section class="card"><p class="caption">この馬は誰？</p>${isYearArchive ? '<p class="small">2025年版は、2025年JRA平地G1での馬券内実績を表示しています。</p>' : ''}<dl class="facts"><div><dt>${recordLabel}</dt><dd>${esc(question.initial.overallRecord)}</dd></div><div><dt>${g1RecordLabel}</dt><dd>${esc(question.initial.g1Record)}</dd></div><div><dt>${jockeyLabel}<br><small>表示順はランダムです</small></dt><dd>${jockeys.map(esc).join('、')}</dd></div><div><dt>集計基準日</dt><dd>${esc(question.initial.asOfDate)}</dd></div><div><dt>対象条件</dt><dd>${esc(question.initial.eligibility)}</dd></div></dl></section><section class="hint-section"><div class="hint-section__head"><p class="caption">HINTS</p><p>ヒントを開くほど、獲得できる点数は下がります。</p></div><div class="hint-grid">${hints}</div></section><section class="card rescue"><button class="secondary" id="first" ${firstReady && !answer.usedFirstCharacter ? '' : 'disabled'}>${answer.usedFirstCharacter ? `頭文字：${esc(question.firstCharacter)}` : '頭文字を表示（−150点）'}</button><p>${firstReady ? '最後の救済ヒントです。' : '通常ヒントをすべて開くと使えます。'}</p></section><section class="card"><label for="answer">馬名を入力</label><input id="answer" autocomplete="off" placeholder="例：サンプルホース" /><p class="error" id="message" role="alert"></p><div class="button-row"><button id="submit" class="primary">回答する</button><button id="giveup" class="text-button">ギブアップ（0点）</button></div><p class="small">誤答: ${answer.wrongAnswerCount}回（1回につき−50点）</p></section>`);
   document.querySelector('#back-home').onclick = () => {
     if (!window.confirm('クイズを中断してホームへ戻りますか？\n進行状況は保存され、ホームから再開できます。')) return;
     homeStep = 'modes';
