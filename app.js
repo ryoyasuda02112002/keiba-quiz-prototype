@@ -79,8 +79,8 @@ function home() {
     return;
   }
   const modes = [
-    ['単年・G1馬券圏内馬', '中級', '対象年を選んで遊ぶ', true],
     ['単年・G1勝利馬', '初級', 'Coming soon', false],
+    ['単年・G1馬券圏内馬', '中級', '対象年を選んで遊ぶ', true],
     ['単年・重賞馬券圏内馬', '上級', 'Coming soon', false],
     ['総合・G1勝利馬', '中級', 'Coming soon', false],
     ['総合・G1馬券圏内馬', '上級', 'Coming soon', false],
