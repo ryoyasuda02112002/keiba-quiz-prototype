@@ -17,6 +17,31 @@ if (attempt && attempt.answers.some((answer) => !questionById.has(answer.questio
 let route = attempt?.completedAt ? 'summary' : attempt ? 'quiz' : 'home';
 let homeStep = 'modes';
 
+// netkeibaの騎手ページで使われている表記へ統一する。
+// 収集元ごとの略称（地方競馬・海外レースを含む）を画面に出さないための表示用辞書。
+const JOCKEY_DISPLAY_NAMES = Object.freeze({
+  'キング': 'R.キング',
+  'シュタル': 'A.シュタルケ',
+  'ディー': 'M.ディー',
+  'マーカン': 'T.マーカンド',
+  'マーフィ': 'O.マーフィー',
+  'ミナリク': 'F.ミナリク',
+  'ムルザバ': 'B.ムルザバエフ',
+  'ムーア': 'R.ムーア',
+  'モレイラ': 'J.モレイラ',
+  'ルメール': 'C.ルメール',
+  'レーン': 'D.レーン',
+  'Ｃ．デム': 'C.デムーロ',
+  'Ｃ．ルメ': 'C.ルメール',
+  'Ｄ．レー': 'D.レーン',
+  'Ｍ．デム': 'M.デムーロ',
+  '佐々木大': '佐々木大輔',
+  '吉村誠之': '吉村誠之助',
+  '御神本訓': '御神本訓史',
+  '石川裕紀': '石川裕紀人',
+});
+const displayJockeyName = (name) => JOCKEY_DISPLAY_NAMES[name] ?? name;
+
 // 画面遷移はブラウザ履歴にも記録し、戻る操作で開始画面へ安全に復帰できるようにする。
 history.replaceState({ route }, '', location.href);
 const navigate = (nextRoute, { replace = false } = {}) => {
@@ -61,7 +86,12 @@ function quiz() {
     ? `<article class="hint open"><h3>${label}<span>−${cost}点</span></h3><p>${Array.isArray(question.hints[id]) ? question.hints[id].map(esc).join('<br>') : esc(question.hints[id])}</p></article>`
     : `<button class="hint" data-hint="${id}"><span>${label}</span><strong>−${cost}点</strong></button>`).join('');
   const firstReady = canRevealFirstCharacter(answer.revealedHints);
-  shell(`<section class="quiz-head"><span>第${attempt.currentPosition + 1}問 / 5問</span><strong>現在の得点 ${currentScore}点</strong></section><section class="card"><p class="caption">この馬は誰？</p><dl class="facts"><div><dt>通算成績</dt><dd>${esc(question.initial.overallRecord)}</dd></div><div><dt>G1通算成績</dt><dd>${esc(question.initial.g1Record)}</dd></div><div><dt>騎乗騎手</dt><dd>${question.initial.jockeys.map(esc).join('、')}</dd></div><div><dt>集計基準日</dt><dd>${esc(question.initial.asOfDate)}</dd></div><div><dt>対象条件</dt><dd>${esc(question.initial.eligibility)}</dd></div></dl></section><section class="hint-grid">${hints}</section><section class="card rescue"><button class="secondary" id="first" ${firstReady && !answer.usedFirstCharacter ? '' : 'disabled'}>${answer.usedFirstCharacter ? `頭文字：${esc(question.firstCharacter)}` : '頭文字を表示（−150点）'}</button><p>${firstReady ? '最後の救済ヒントです。' : '通常ヒントをすべて開くと使えます。'}</p></section><section class="card"><label for="answer">馬名を入力</label><input id="answer" autocomplete="off" placeholder="例：サンプルホース" /><p class="error" id="message" role="alert"></p><div class="button-row"><button id="submit" class="primary">回答する</button><button id="giveup" class="text-button">ギブアップ（0点）</button></div><p class="small">誤答: ${answer.wrongAnswerCount}回（1回につき−50点）</p></section>`);
+  shell(`<section class="quiz-head"><span>第${attempt.currentPosition + 1}問 / 5問</span><strong>現在の得点 ${currentScore}点</strong><button class="text-button back-home" id="back-home">← ホームへ戻る</button></section><section class="card"><p class="caption">この馬は誰？</p><dl class="facts"><div><dt>通算成績</dt><dd>${esc(question.initial.overallRecord)}</dd></div><div><dt>G1通算成績</dt><dd>${esc(question.initial.g1Record)}</dd></div><div><dt>騎乗騎手</dt><dd>${question.initial.jockeys.map(displayJockeyName).map(esc).join('、')}</dd></div><div><dt>集計基準日</dt><dd>${esc(question.initial.asOfDate)}</dd></div><div><dt>対象条件</dt><dd>${esc(question.initial.eligibility)}</dd></div></dl></section><section class="hint-grid">${hints}</section><section class="card rescue"><button class="secondary" id="first" ${firstReady && !answer.usedFirstCharacter ? '' : 'disabled'}>${answer.usedFirstCharacter ? `頭文字：${esc(question.firstCharacter)}` : '頭文字を表示（−150点）'}</button><p>${firstReady ? '最後の救済ヒントです。' : '通常ヒントをすべて開くと使えます。'}</p></section><section class="card"><label for="answer">馬名を入力</label><input id="answer" autocomplete="off" placeholder="例：サンプルホース" /><p class="error" id="message" role="alert"></p><div class="button-row"><button id="submit" class="primary">回答する</button><button id="giveup" class="text-button">ギブアップ（0点）</button></div><p class="small">誤答: ${answer.wrongAnswerCount}回（1回につき−50点）</p></section>`);
+  document.querySelector('#back-home').onclick = () => {
+    if (!window.confirm('クイズを中断してホームへ戻りますか？\n進行状況は保存され、ホームから再開できます。')) return;
+    homeStep = 'modes';
+    navigate('home');
+  };
   document.querySelectorAll('[data-hint]').forEach((b) => b.onclick = () => { answer.revealedHints.push(b.dataset.hint); save(); render(); });
   document.querySelector('#first').onclick = () => { answer.usedFirstCharacter = true; save(); render(); };
   const submit = () => {
