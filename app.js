@@ -3,8 +3,8 @@ import { clearAttempt, loadAttempt, saveAttempt } from './storage.js';
 
 const app = document.querySelector('#app');
 const [questions, dailySets] = await Promise.all([
-  fetch('./data/questions.2026.json').then((r) => r.json()),
-  fetch('./data/daily-sets.2026.json').then((r) => r.json()),
+  fetch('./questions.2026.json').then((r) => r.json()),
+  fetch('./daily-sets.2026.json').then((r) => r.json()),
 ]);
 const questionById = new Map(questions.filter((q) => q.enabled).map((q) => [q.id, q]));
 const dateKey = japanDateKey();
