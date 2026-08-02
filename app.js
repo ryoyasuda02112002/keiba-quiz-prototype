@@ -52,7 +52,7 @@ const navigate = (nextRoute, { replace = false } = {}) => {
 
 const esc = (v) => String(v).replace(/[&<>'"]/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;' })[c]);
 const save = () => saveAttempt(attempt);
-const shell = (body) => { app.innerHTML = `<header class="site-header"><p>KEIBA QUIZ / PROTOTYPE</p><h1>競馬クイズ</h1></header>${body}<footer>プロトタイプ版・正式ランキングなし・JRA公式サービスではありません。<br>2026年JRA平地G1の馬券圏内馬を対象にした身内検証用です。</footer>`; };
+const shell = (body) => { app.innerHTML = `<header class="site-header"><p><span>KEIBA QUIZ</span><i>PROTOTYPE</i></p><h1>競馬クイズ</h1><div class="header-track" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b></div></header>${body}<footer>プロトタイプ版・正式ランキングなし・JRA公式サービスではありません。<br>2026年JRA平地G1の馬券圏内馬を対象にした身内検証用です。</footer>`; };
 const getCurrent = () => { const answer = attempt.answers[attempt.currentPosition]; return { answer, question: questionById.get(answer.questionId) }; };
 
 function home() {
@@ -67,14 +67,14 @@ function home() {
     return;
   }
   const modes = [
-    ['単年・G1馬券圏内馬', '対象年を選んで遊ぶ', true],
-    ['単年・G1勝利馬', 'Coming soon', false],
-    ['単年・重賞馬券圏内馬', 'Coming soon', false],
-    ['総合・G1勝利馬', 'Coming soon', false],
-    ['総合・G1馬券圏内馬', 'Coming soon', false],
-    ['総合・重賞馬券圏内馬', 'Coming soon', false],
-  ].map(([title, note, enabled]) => `<button class="mode-card ${enabled ? 'available' : ''}" ${enabled ? 'id="year-mode"' : 'disabled'}><strong>${title}</strong><span>${note}</span></button>`).join('');
-  shell(`<section class="card hero"><span class="badge">身内テスト版</span><h2>モードを選択</h2><p>現在は「単年・G1馬券圏内馬」の2026年版のみ公開中です。</p><div class="mode-grid">${modes}</div>${existing ? '<button class="text-button" id="resume">前回のクイズを再開</button>' : ''}</section><section class="card"><h2>遊び方</h2><ol><li>通算成績・G1成績・騎手から推理します。</li><li>必要なら5種類のヒントを開きます。</li><li>すべてのヒント後は頭文字で救済できます。</li><li>誤答は1回50点減点。ギブアップは0点です。</li></ol><p class="notice">データ訂正や感想は、共有者へお知らせください。</p></section>`);
+    ['単年・G1馬券圏内馬', '中級', '対象年を選んで遊ぶ', true],
+    ['単年・G1勝利馬', '初級', 'Coming soon', false],
+    ['単年・重賞馬券圏内馬', '上級', 'Coming soon', false],
+    ['総合・G1勝利馬', '中級', 'Coming soon', false],
+    ['総合・G1馬券圏内馬', '上級', 'Coming soon', false],
+    ['総合・重賞馬券圏内馬', '超上級', 'Coming soon', false],
+  ].map(([title, difficulty, note, enabled]) => `<button class="mode-card ${enabled ? 'available' : ''}" ${enabled ? 'id="year-mode"' : 'disabled'}><span class="mode-card__top"><strong>${title}</strong><em class="difficulty difficulty--${difficulty}">${difficulty}</em></span><span class="mode-card__bottom"><small>${note}</small><b>${enabled ? 'PLAY →' : 'LOCKED'}</b></span></button>`).join('');
+  shell(`<section class="card hero"><span class="badge">身内テスト版</span><h2>今日のレースを選ぼう</h2><p>知っている馬から、まだ知らない名馬まで。あなたの競馬知識に合うコースを選択。</p><div class="mode-grid">${modes}</div>${existing ? '<button class="resume-button" id="resume">▶ 前回のクイズを再開する</button>' : ''}</section><section class="howto card"><p class="caption">HOW TO PLAY</p><h2>少ないヒントで、馬名を見抜け。</h2><ol><li><b>戦績</b>と騎手から、まずは一頭を絞り込む</li><li>迷ったらヒントを使う。使うほど得点は下がる</li><li>5問の合計スコアで、今日の自分に挑戦</li></ol><p class="notice">データ訂正や感想は、共有者へお知らせください。</p></section>`);
   document.querySelector('#year-mode').onclick = () => { homeStep = 'years'; render(); };
   document.querySelector('#resume')?.addEventListener('click', () => navigate('quiz'));
 }
