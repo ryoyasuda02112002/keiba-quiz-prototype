@@ -108,7 +108,7 @@ const navigate = (nextRoute, { replace = false } = {}) => {
 
 const esc = (v) => String(v).replace(/[&<>'"]/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;' })[c]);
 const save = () => saveAttempt(attemptKey, attempt);
-const shell = (body) => { app.innerHTML = `<header class="site-header"><p><span>KEIBA GUESS</span><i>PROTOTYPE</i></p><h1>KEIBA GUESS</h1><div class="header-track" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b></div></header>${body}<footer>プロトタイプ版・正式ランキングなし・JRA公式サービスではありません。<br>2026年JRA平地G1の馬券圏内馬を対象にした身内検証用です。</footer>`; };
+const shell = (body) => { app.innerHTML = `<header class="site-header"><p><span>KEIBA GUESS</span><i>PROTOTYPE</i></p><h1>KEIBA GUESS</h1><div class="header-track" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b></div></header>${body}<footer>プロトタイプ版・正式ランキングなし・JRA公式サービスではありません。<br>2025年・2026年のJRA平地G1馬を対象にした身内検証用です。</footer>`; };
 const getCurrent = () => { const answer = attempt.answers[attempt.currentPosition]; return { answer, question: questionById.get(answer.questionId) }; };
 
 function home() {
@@ -142,14 +142,24 @@ function quiz() {
   const g1RecordLabel = isYearArchive ? '内訳（1着-2着-3着）' : 'G1通算成績';
   const jockeyLabel = isYearArchive ? '馬券内時の騎乗騎手' : '騎乗騎手';
   const currentScore = scoreQuestion({ correct: true, ...answer });
+  const archiveHints = isYearArchive ? {
+    H2: { label: '2025年G1での最多騎乗騎手', description: '2025年の馬券内時に最も多く騎乗した騎手' },
+    H3: { label: '2025年G1馬券内の内訳', description: '2025年の1着・2着・3着回数' },
+    H5: { label: '最後の2025年G1馬券内条件', description: '最後に馬券内となった2025年G1の芝・ダートと距離' },
+  } : {};
   const hintValue = (id) => {
-    if (id === 'H2') return `最多騎乗騎手：${displayJockeyName(question.initial.jockeys[0])}`;
-    if (id === 'H5') return `直近出走の条件：${latestCondition(question.hints.H2)}`;
+    if (id === 'H2') return `${isYearArchive ? '2025年G1での最多騎乗騎手' : '最多騎乗騎手'}：${displayJockeyName(question.initial.jockeys[0])}`;
+    if (id === 'H5') return `${isYearArchive ? '最後の2025年G1馬券内条件' : '直近出走の条件'}：${latestCondition(question.hints.H2)}`;
     return question.hints[id];
   };
-  const hints = HINTS.map(({ id, label, description, cost }) => answer.revealedHints.includes(id)
-    ? `<article class="hint open"><h3>${label}<span>−${cost}点</span></h3><p>${Array.isArray(hintValue(id)) ? hintValue(id).map(esc).join('<br>') : esc(hintValue(id))}</p></article>`
-    : `<button class="hint" data-hint="${id}"><span class="hint-copy"><b>${label}</b><small>${description}</small></span><strong>−${cost}点</strong></button>`).join('');
+  const hints = HINTS.map(({ id, label, description, cost }) => {
+    const archiveHint = archiveHints[id];
+    const hintLabel = archiveHint?.label ?? label;
+    const hintDescription = archiveHint?.description ?? description;
+    return answer.revealedHints.includes(id)
+      ? `<article class="hint open"><h3>${hintLabel}<span>−${cost}点</span></h3><p>${Array.isArray(hintValue(id)) ? hintValue(id).map(esc).join('<br>') : esc(hintValue(id))}</p></article>`
+      : `<button class="hint" data-hint="${id}"><span class="hint-copy"><b>${hintLabel}</b><small>${hintDescription}</small></span><strong>−${cost}点</strong></button>`;
+  }).join('');
   const firstReady = canRevealFirstCharacter(answer.revealedHints);
   const uniqueJockeys = [...new Set(question.initial.jockeys.map(displayJockeyName))];
   if (!answer.jockeyDisplayOrder) answer.jockeyDisplayOrder = shuffled(uniqueJockeys);
